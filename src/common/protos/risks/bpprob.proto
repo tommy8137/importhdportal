@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+message ReqBPProbability {
+  double conductivity = 1;
+  double dia_temp_value = 2;
+  double uf = 3;
+  int32 blood_flow = 4;
+  double total_uf = 5;
+  int32 dia_flow = 6;
+  double ns = 7;
+  int32 age = 8;
+  int32 dm = 9;
+  double temperature = 10;
+  double dryweight = 11;
+  string gender = 12;
+  int32 sbp = 13;
+  string date = 14;
+  int32 ul = 15;
+  int32 ulnum = 16;
+  int32 diff = 17;
+  double deltadia_temp_value = 18;
+  double dialysis_year = 19;
+  double target_uf = 20;
+  double delta_uf = 21;
+  double delta_bloodflow = 22;
+}
+message ResBPProbability {
+  repeated int32 res_bp_probability = 1;
+}

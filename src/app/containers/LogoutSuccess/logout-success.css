@@ -1,0 +1,26 @@
+
+.background {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  background: #50B4AA;
+  justify-content: center;
+}
+
+.container {
+  margin-top: 100px;
+  text-align: center;
+  font-family: 'Lucida Grande', Tahoma, Verdana, sans-serif;
+}
+
+.heading {
+  font-size: 24px;
+  color: #FDFDFD;
+  padding: 20px;
+  line-height: 30px;
+}
+
+.subheading {
+  font-size: 21px;
+  color: #C9F3CE;
+}

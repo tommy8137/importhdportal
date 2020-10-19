@@ -1,0 +1,196 @@
+@import "app/css/variables.css";
+@import "app/css/mixins.css";
+
+$search-form-length: 158px;
+$search-form-radius: 9px;
+
+$calandar-svg-icon-url: "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDI0IDI0IiBoZWlnaHQ9IjI0cHgiIGlkPSJMYXllcl8xIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjI0cHgiIHhtbDpzcGFjZT0icHJlc2VydmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxnPjxwYXRoIGQ9Ik0yMi45LDFIMThjMC0wLjYtMC40LTEtMS0xcy0xLDAuNC0xLDFIOGMwLTAuNi0wLjQtMS0xLTFTNiwwLjQsNiwxSDEuMUMwLjUsMSwwLDEuNSwwLDIuMXYyMC44QzAsMjMuNSwwLjUsMjQsMS4xLDI0aDIxLjggICBjMC42LDAsMS4xLTAuNSwxLjEtMS4xVjIuMUMyNCwxLjUsMjMuNSwxLDIyLjksMXogTTIyLDIySDJWOGgyMFYyMnogTTIyLDdIMlYzaDR2MWMwLDAuNiwwLjQsMSwxLDFzMS0wLjQsMS0xVjNoOHYxICAgYzAsMC42LDAuNCwxLDEsMXMxLTAuNCwxLTFWM2g0Vjd6Ii8+PHBhdGggZD0iTTgsMTBINHY0aDRWMTB6IE03LDEzSDV2LTJoMlYxM3oiLz48cGF0aCBkPSJNMTQsMTBoLTR2NGg0VjEweiBNMTMsMTNoLTJ2LTJoMlYxM3oiLz48cGF0aCBkPSJNMjAsMTBoLTR2NGg0VjEweiBNMTksMTNoLTJ2LTJoMlYxM3oiLz48cGF0aCBkPSJNOCwxNkg0djRoNFYxNnogTTcsMTlINXYtMmgyVjE5eiIvPjxwYXRoIGQ9Ik0xNCwxNmgtNHY0aDRWMTZ6IE0xMywxOWgtMnYtMmgyVjE5eiIvPjxwYXRoIGQ9Ik0yMCwxNmgtNHY0aDRWMTZ6IE0xOSwxOWgtMnYtMmgyVjE5eiIvPjwvZz48L3N2Zz4=";
+
+.search-table {
+  position: relative;
+  width: 100%;
+  max-width: $appWidth;
+  height: $search-form-length;
+  border-radius: $search-form-radius;
+  background-color: rgba(255, 255, 255, 0.85);
+  margin-top: 12px;
+  margin-bottom: 18px;
+}
+
+.search-table-1st-line {
+  @mixin flex-box row, left, center;
+  padding-top: 35px;
+}
+
+.search-table-2nd-line {
+  @mixin flex-box row, left, center;
+  padding-top: 20px;
+}
+
+.duration-symbol {
+  color: #777;
+  padding-left: 14px;
+  padding-right: 14px;
+  font-size: 2.5em;
+}
+
+.today-text {
+  @mixin round;
+  cursor: pointer;
+  width: 200px;
+  background-color: #fff;
+}
+
+.search-input {
+  @mixin round;
+  @mixin selection-green;
+  margin-right: 20px;
+  margin-left: 71.5px;
+  padding-left: 30px;
+  width: 718px;
+}
+
+.search-ipnut::placeholder {
+  color: #777;
+}
+
+.search-button-enabled {
+  @mixin round;
+  outline: none;
+  cursor: pointer;
+  box-shadow: none;
+  text-align: center;
+  color: #fff;
+  background-color: $primary-green;
+  width: 130px;
+
+  &:hover {
+    background-color: $primary-orange-color;
+  }
+
+}
+
+:global(button:disabled) {
+  cursor: not-allowed;
+}
+
+.search-button-disabled {
+  composes: search-button-enabled;
+  background-color: #aaa;
+}
+
+.round-datepicker:focus,
+.search-input:focus {
+  @mixin round-focus;
+}
+
+.round-datepicker {
+  @mixin round;
+  @mixin selection-green;
+  cursor: pointer;
+  width: 200px;
+  padding-right: 30px;
+  text-align: center;
+  background: #fff url('./images/cal_icon.png') no-repeat;
+  background-position: 160px 5px !important;
+  background-origin: border-box;
+}
+
+/* date picker */
+
+:global(.react-datepicker__navigation--next) {
+  border-left-color: $primary-green !important;
+}
+
+:global(.react-datepicker__navigation--previous) {
+  border-right-color: $primary-green !important;
+}
+
+:global(.react-datepicker__navigation--next:hover) {
+  border-left-color: $primary-orange-color !important;
+}
+
+:global(.react-datepicker__navigation--previous:hover) {
+  border-right-color: $primary-orange-color !important;
+}
+
+:global(.react-datepicker__day--selected:hover):hover,
+:global(.react-datepicker__day--in-range:hover):hover,
+:global(.react-datepicker__day--selected),
+:global(.react-datepicker__day--in-range) {
+  background-color: $primary-green !important;
+}
+
+:global(.react-datepicker__day) {
+  width: 30px !important;
+  line-height: 30px !important;
+  font-size: 1.6em;
+  font-weight: 300;
+}
+
+:global(.react-datepicker__day--today) {
+  border-radius: 5px;
+  color: #fff;
+  background-color: $primary-orange-color !important;
+}
+
+:global(.react-datepicker__header) {
+  width: 256px;
+}
+
+:global(.react-datepicker__day-name) {
+  width: 30px;
+  line-height: 30px;
+}
+
+:global(.react-datepicker__header) {
+  font-size: 1rem;
+}
+
+/* radio */
+/*
+1. 只有label 可以作為btn的延伸按鍵區
+
+*/
+
+.radio-today,
+.radio-duration {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 71px;
+}
+
+.search-table label::before {
+  content: "";
+  border: 3px solid #fff;
+  border-radius: 100%;
+  background: #fff;
+  box-shadow: 0 0 0 2px #aaa;
+  height: 18.5px;
+  width: 18.5px;
+  margin-left: -38px;
+}
+
+.search-table label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+}
+
+.today-label,
+.duration-label {
+  position: absolute;
+  width: 300px;
+  height: 40px;
+}
+
+.search-table input[type=radio] {
+  position: absolute;
+  display: none;
+}
+
+.search-table input[type=radio]:checked + label::before {
+  background: #5aa5ab;
+}

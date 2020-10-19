@@ -1,0 +1,11 @@
+@import "app/css/variables.css";
+@import "app/css/mixins.css";
+
+.container {
+  width: 100%;
+  max-width: $appWidth;
+  background-color: #fff;
+  opacity: 0.85;
+  border-radius: 8px;
+}
+

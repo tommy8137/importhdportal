@@ -1,0 +1,43 @@
+@import "app/css/variables.css";
+@import "app/css/mixins.css";
+
+.user-bar {
+	@mixin flex-box row, flex-end;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.user-info-container {
+	@mixin flex-box;
+	flex: 1;
+	overflow: hidden;
+	&:after {
+		display: flex;
+		content: '';
+		border-top: $border-thin solid $whiteBorderColor;
+		height: 0px;
+		width: 2em;
+	}
+}
+
+.user-info {
+	@mixin flex-box row,  flex-start, center;
+	flex: 1;
+	overflow: hidden;
+	font-family: $fontFamily;
+	flex-wrap: nowrap;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	color: #fff;
+	height: $componentSingleLineHeight;
+	border-radius: calc($componentSingleLineHeight / 2);
+	border: $border-thin solid $whiteBorderColor;
+
+	* {
+		font-size: 1.2rem;
+    line-height: 1.2rem;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+}

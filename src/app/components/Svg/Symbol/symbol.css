@@ -1,0 +1,31 @@
+@define-mixin status $color: gray {
+  color: $color;
+  border: 2px solid $color;
+  border-color: $color;
+  stroke: $color;
+
+  .icon-path {
+    fill: $color;
+  }
+}
+
+.type-inactive {
+  @mixin status gray;
+
+  .value {
+    color: gray;
+  }
+}
+
+@for $i from 0 to 19 {
+  .type-$i {
+    @mixin status $(color$(i));
+  }
+}
+
+
+:global(.inactive) {
+  >.icon-path {
+    fill: gray;
+  }
+}

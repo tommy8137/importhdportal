@@ -1,0 +1,6 @@
+{
+  "name": "yGridLine",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./yGridLine.js"
+}

@@ -1,0 +1,15 @@
+import constants from 'flux-constants'
+
+export default constants([
+  'RISK_MODULE_SELECT',
+  'RISK_PREDICT_REQUEST',
+  'RISK_PREDICT_SUCCESS',
+  'RISK_PREDICT_FAILED',
+  // 'RISK_SUMMARY_REQUEST',
+  // 'RISK_SUMMARY_SUCCESS',
+  // 'RISK_SUMMARY_FAILED',
+  'RISK_LIBS_REQUEST',
+  'RISK_LIBS_SUCCESS',
+  'RISK_LIBS_FAILED',
+  'RISK_LOAD_MODULES',
+])

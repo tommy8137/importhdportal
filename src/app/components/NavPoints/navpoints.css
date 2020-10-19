@@ -1,0 +1,42 @@
+@import "app/css/variables.css";
+@import "app/css/mixins.css";
+@import "app/components/Buttons/ButtonDefault/styles.css";
+
+.container {
+  @mixin flex-box row, flex-end, center;
+  padding: 1rem;
+}
+
+.btn {
+  position: relative;
+  composes: white;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  line-height: 1.25rem;
+  &:not(:disabled):hover {
+    .arrow-left {
+      transform: translate3d(-0.2rem, -0.2rem, 0) scale(2);
+    }
+    .arrow-right {
+      transform: translate3d(0.2rem, -0.2rem, 0) scale(2);
+    }
+  }
+}
+
+.arrow {
+  position: absolute;
+  transform: translate3d(0, -0.1rem, 0) scale(1.5);
+  transition: transform 0.3s, scale 0.3s;
+}
+
+.arrow-left {
+  composes: arrow;
+  left: 1rem;
+}
+
+.arrow-right {
+  composes: arrow;
+  right: 1rem;
+}

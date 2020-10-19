@@ -1,0 +1,288 @@
+@import "app/css/variables.css";
+@import "app/css/components.css";
+@import "app/css/mixins.css";
+
+$modal-row-width: 680px;
+$round-box-height: 2.375rem;
+
+.close-botton{
+  color: #999;
+  padding-right: 20px;
+  cursor: pointer;
+  width: 50px;
+  text-align: center;
+}
+
+.pharse-modal-class {
+  @mixin flex-box column, flex-start, center;
+  overflow: hidden;
+  width: 720px;
+  min-height: 550px;
+  height: auto;
+  /*border-style: solid;*/
+  /*border-color: $primary-green;*/
+  /*border-width: 3px;*/
+  /*border-radius: 8px;*/
+  border-radius: 1.5rem;
+  padding: 10px;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  position: absolute;
+  outline: none;
+  top: calc(50% - 550px / 2);
+  left: calc(50% - 720px / 2);
+  background-color: #e1e1e1;
+  transform: rotateX(0deg);
+  opacity: 0.96;
+  font-size: 1.2rem;
+  box-shadow: 2px 2px 2px #aaa;
+  /*box-shadow: 2px 2px 5px #888888, 0px 0px 5px 1px #888888 inset;*/
+  @media (max-width: 500px and min-width: 301px) {
+    /* width: 300px;
+    left: calc(50% - 150px); */
+  }
+}
+
+.pharse-items {
+  @mixin flex-box row, flex-start, center;
+  @mixin round-box 2.375rem;
+  box-shadow: none;
+  outline: none;
+  width: calc($modal-row-width - 40px);
+  border: 1px solid #ccc;
+  color: #333;
+  margin-left: 1rem;
+  background-color: white;
+  min-height: 2.375rem;
+  height: auto;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  line-height: 1.75rem;
+  &:focus {
+    color: #333;
+    background-color: #eee;
+  }
+  &:hover {
+    color: #333;
+    background-color: #eee;
+  }
+  &:active {
+    color: #333;
+    background-color: #ccc;
+  }
+}
+
+.pharse-items-blur{
+  composes: pharse-items;
+  color: #aaa;
+}
+
+.pharse-row {
+  @mixin flex-box row, flex-start, center;
+  cursor: pointer;
+  margin-bottom: 0.3rem;
+}
+
+.radio-input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /*margin-left: 71px;*/
+}
+
+.pharse-row label::before {
+  content: "";
+  border: 3px solid #fff;
+  border-radius: 100%;
+  background: #fff;
+  box-shadow: 0 0 0 2px #aaa;
+  height: 1.5rem;
+  width: 1.5rem;
+  /*margin-left: 38px;*/
+}
+
+.pharse-row label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  margin-left: 1rem;
+}
+
+.radio-label {
+  /*position: absolute;*/
+  /*width: 300px;*/
+  height: 40px;
+  /*height: 2.5rem;*/
+}
+
+.pharse-row input[type=radio] {
+  /*position: absolute;*/
+  display: none;
+}
+
+.pharse-row input[type=radio]:checked + label::before {
+  background: #5aa5ab;
+}
+
+/* check-input, check-label */
+.check-input {
+
+}
+
+.check-label {
+
+}
+
+.checkGroup {
+  input[type="checkbox"] {
+    display: none;
+  }
+  label {
+    cursor: pointer;
+  }
+  input[type="checkbox"] + label:before {
+    border: 2px solid #aaa;
+    border-radius: 8px;
+    background: #fff;
+    content: "\00a0";
+    display: inline-block;
+    font: 2rem;
+    height: 2rem;
+    margin: 0 1rem 0 0;
+    padding:0;
+    vertical-align: middle;
+    width: 2rem;
+  }
+  input[type="checkbox"]:checked + label:before {
+    background: #fff;
+    color: $primary-green;
+    content: "\2713";
+    text-align: center;
+    font-size: 2rem;
+  }
+  input[type="checkbox"]:checked + label:after {
+    font-weight: bold;
+  }
+}
+
+.container-section {
+  /*.header-section {}*/
+  height: 100%;
+  @mixin flex-box column, flex-start, center;
+
+    .header-section {
+      @mixin flex-box row, space-between, flex-start;
+      width: 100%;
+      margin-top: 1rem;
+      font-weight: 900;
+    }
+
+    .alarm-pharse-section {
+      width: $modal-row-width;
+
+
+      .body-section {
+
+      }
+    }
+    .alarm-process-section {
+      width: $modal-row-width;
+
+      .body-section {
+        @mixin flex-box column, center, flex-start;
+        margin-left: 3.6rem;
+      }
+
+    }
+    .alarm-process-time-section {
+      width: $modal-row-width;
+      flex: 1;
+      .body-section {
+        @mixin flex-box row, flex-end, center;
+      }
+      :global(.Select-control .Select-value-label) {
+        width: 90%;
+        line-height: 2.4rem;
+      }
+    }
+    .button-section {
+      @mixin flex-box column, center, flex-end;
+
+      width: $modal-row-width;
+    }
+
+
+}
+
+/* --------------------------------------------------------------------------- */
+.alarm-process-selector {
+  composes: dropdown;
+  width: calc($modal-row-width - 40px - 1rem);
+  height: $round-box-height;
+  line-height: $round-box-height;
+  text-align: left;
+
+  :global(.Select-control .Select-value) {
+    padding: 0 !important;
+    padding-left: 1.1875rem !important;
+    padding-right: 1.1875rem !important;
+    line-height: 2.4rem !important;
+  }
+  :global(.Select-control .Select-value-label) {
+    width: 98%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+}
+
+.alarm-process-time-selector {
+  composes: dropdown;
+  width: calc($modal-row-width / 4.1);
+  height: $round-box-height;
+  line-height: $round-box-height;
+  :global(.Select-menu) {
+    max-height: calc(10rem - 2px);
+  }
+  :global(.Select-menu-outer) {
+    max-height: 10rem;
+  }
+}
+
+.seperator {
+  display: block;
+  width: $modal-row-width;
+  border-bottom: 1px solid #aaa;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  height: 2px;
+}
+
+.edit-input {
+  @mixin round-box 2.375rem;
+  border: 1px $primary-green solid;
+  width: 624px;
+  background: none;
+  border-color: $primary-green;
+  outline: none;
+}
+
+.toggle-button {
+  composes: primary-green-button;
+  margin-top: 0.7rem;
+}
+.edit-button {
+  composes: toggle-button;
+  background: none;
+  border: 1px $primary-green solid;
+  color: $primary-green;
+}
+
+.cancel-button {
+  composes: toggle-button;
+  background: white;
+  border: 1px $primary-green solid;
+  color: $primary-green;
+}

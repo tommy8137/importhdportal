@@ -1,0 +1,21 @@
+@import "app/css/variables";
+@import "app/css/mixins.css";
+@import "../../variables.css";
+@import "app/css/components.css";
+
+.filter-bar {
+  /*position: absolute;*/
+  margin-left: 2rem;
+  padding-top: 1rem;
+  z-index: 10;
+  left: $padding-simulator;
+  right: $right-column-width;
+  height: $filter-bar-height;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  >div:first-child {
+    margin-right: 1rem;
+  }
+}

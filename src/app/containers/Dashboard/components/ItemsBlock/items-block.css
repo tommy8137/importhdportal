@@ -1,0 +1,122 @@
+@import "app/css/variables.css";
+@import "app/css/mixins.css";
+
+.list-block {
+  margin-top: 1rem;
+  margin-left: 1rem;
+  align-self: stretch;
+}
+
+.row {
+  @mixin flex-box row, flex-start, center;
+}
+
+.item {
+  composes: row;
+  cursor: pointer;
+  position: relative;
+  @mixin round-box 2.2rem;
+  background: white;
+  min-width: 5rem;
+  max-width: 25rem;
+  border-color: gray;
+  margin-right: 1rem;
+  margin-top: 1rem;
+  padding-left: 1.4rem;
+  border: 2px solid $default-border-color;
+
+  &:before {
+    content: '';
+    top: -1.2em;
+    left: 1.9rem;
+    position: absolute;
+    width: 2px;
+    height: 1.2rem;
+    border-left: 1px solid gray;
+  }
+}
+
+.item-orange {
+  composes: item;
+  border: 2px solid orange;
+}
+
+.label {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  margin-left: 0.5rem;
+}
+
+.description {
+  margin-left: 0.5rem;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.red {
+  composes: description;
+  color: color(red l(-10%));
+}
+
+.orange {
+  composes: description;
+  color: gray;
+}
+
+.gray {
+  curosor: default;
+  composes: description;
+  color: gray;
+}
+
+.critical {
+  composes: description;
+  color: color(red l(-10%));
+}
+
+.toggle-list {
+  transition: max-height 1s;
+  overflow: hidden;
+}
+
+.list-collapsed {
+  display: none;
+  composes: toggle-list;
+  transform: scale(1, 0);
+}
+
+.list-expanded {
+  composes: toggle-list;
+  transform: scale(1, 1);
+}
+
+.toggle {
+  position: relative;
+  padding-left: 0px;
+  align-items: flex-start;
+  composes: item;
+  border: 2px solid transparent;
+  background: transparent;
+  justify-content: flex-start;
+}
+
+.toggle-icon {
+  position: absolute;
+  left: 0.5rem;
+}
+
+.toggle-button {
+  @mixin round-box 2rem;
+  padding-left: 1.8rem;
+  min-width: 100px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background-color: white;
+  border: 2px solid gray;
+  &:focus {
+    outline: none;
+  }
+}

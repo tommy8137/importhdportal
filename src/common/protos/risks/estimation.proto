@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+message ReqBPEstimation {
+  double conductivity = 1;
+  double dia_temp_value = 2;
+  double uf = 3;
+  int32 blood_flow = 4;
+  double total_uf = 5;
+  int32 dia_flow = 6;
+  double ns = 7;
+  int32 age = 8;
+  int32 dm = 9;
+  double temperature = 10;
+  double dryweight = 11;
+  string gender = 12;
+  int32 sbp = 13;
+  string date = 14;
+  double dialysis_year = 15;
+  double deltadia_temp_value = 16;
+  double target_uf = 17;
+  double delta_uf = 18;
+  double delta_bloodflow = 19;
+}
+message ResBPEstimation {
+  repeated Predict res_bp_estimation = 1;
+}
+message Predict {
+  double Lower_bound = 1;
+  double Predict = 2;
+  double Upper_bound = 3;
+}

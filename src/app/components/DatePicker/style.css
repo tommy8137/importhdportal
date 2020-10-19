@@ -1,0 +1,145 @@
+@import "app/css/variables.css";
+@import "app/css/mixins.css";
+.date-picker {
+	@mixin flex-box row, center, center;
+	width: 220px;
+	height: $componentSingleLineHeight;
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+	position: relative;
+	border: $border-thin solid $whiteBorderColor;
+	border-radius: 1.5em;
+	color: #fff;
+
+	> * {
+		cursor: pointer;
+	}
+
+	:global(.icon) {
+		transform: translate3d(0, 0, 0) scale(1);
+		transition: transform 0.3s, scale 0.3s;
+
+		&:global(.left):hover {
+			transform: translate3d(-0.1em, 0, 0) scale(1.1);
+		}
+		&:global(.right):hover {
+			transform: translate3d(0.1em, 0, 0) scale(1.1);
+		}
+	}
+
+  /* ------------------------------------------------- */
+  /* Override React-Select                             */
+  /* ------------------------------------------------- */
+  :global(.Select-value-label) {
+    color: #fff !important;
+    line-height: 2.4rem;
+  }
+  /*:global(.has-value) {
+    > :global(.Select-control) {
+      > :global(.Select-value .Select-value-label){
+        color: #fff;
+      }
+    }
+  }*/
+
+  .select-value {
+    :global(.Select-value-label) {
+
+    }
+
+    :global(.Select-control) {
+
+      /* select arrow*/
+      :global(.Select-arrow-zone) {
+        display: none;
+      }
+      cursor: pointer;
+      border: none;
+      background-color: transparent;
+
+    }
+
+    :global(.Select-control):focus; {
+      background-color: transparent;
+    }
+
+    :global(.Select-menu-outer) {
+      margin-top: 3px;
+      margin-left: -37px;
+      width: 190px;
+      opacity: 0.9;
+      border: none;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      background-color: #345274;
+      > div:nth-child(1) {
+        > div {
+          color: #ddd;
+          background-color: #345274;
+        }
+        /* high light previous selected item */
+        :global(.is-selected) {
+          color: #fff;
+          background-color: #333;
+        }
+        /* hover effect */
+        > div:hover {
+          background-color:#333;
+        }
+        > .selected {
+          color: #fff;
+          background-color: #fc0;
+        }
+      }
+      /* custom scrollbar */
+      ::-webkit-scrollbar-track
+      {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        border-radius: 8px;
+        background-color: transparent;
+      }
+
+      ::-webkit-scrollbar
+      {
+        width: 10px;
+        background-color: transparent;
+      }
+
+      ::-webkit-scrollbar-thumb
+      {
+        border-radius: 8px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        background-color: #444;
+      }
+    }
+  }
+
+  /* fixed the origin style have different shadow color */
+  :global(.is-focused:not(.is-open)) > :global(.Select-control) {
+    box-shadow: none;
+  }
+
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.history-bg {
+  .date-picker {
+    background: #fff url("./images/history.png") 40px center no-repeat;
+    border: 2px solid $primary-green;
+    color: $primary-green;
+  }
+
+  :global(.Select-value-label) {
+    color: $primary-green !important;
+  }
+}
+
+
+.current-pick {
+  flex: 1;
+  text-align: center;
+  font-family: $fontFamily;
+  z-index: 1;
+}

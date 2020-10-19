@@ -1,0 +1,5 @@
+.point-label {
+  &:hover {
+    font-size: 14px;
+  }
+}

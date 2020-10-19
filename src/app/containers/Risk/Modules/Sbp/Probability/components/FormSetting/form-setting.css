@@ -1,0 +1,102 @@
+@import "app/css/variables.css";
+@import "app/css/mixins.css";
+@import "app/css/tables.css";
+@import "app/css/components.css";
+@import "app/containers/Risk/Modules/Sbp/components/FormSBP/form-sbp.css";
+
+.shadow-input {
+  width: 100px;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  color: rgba(100, 100, 100, 1);
+}
+
+.config-value-input-box {
+  width: 100px;
+}
+
+.row {
+  :global(.is-focused:not(.is-open)) > :global(.Select-control) {
+    box-shadow: inset 0px 0px 2px 2px $primary-green ;
+  }
+}
+.condition-selector {
+  width: 100px;
+  text-align: center;
+  border: none;
+
+  :global(.Select-control) {
+    color: rgba(100, 100, 100, 1);
+    box-shadow: 0px 0px 2px 2px inset;
+    border-radius: 0;
+    border: none;
+    outline: none;
+    line-height: 1.8rem;
+    height: 1.8rem;
+    :global(.Select-input) {
+      height: 1.8rem;
+    }
+    :global(.Select-value) {
+      line-height: 1.8rem;
+    }
+    :global(.Select-value-label) {
+      display: block;
+      line-height: 1.8rem;
+    }
+  }
+
+  :global(.Select-menu-outer) {
+    z-index: 108;
+    border: 1px solid #ccc;
+    margin-top: 0.1rem;
+    line-height: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    > div:nth-child(1) {
+      border-radius: 5px 5px 0 0;
+      > div {
+
+      }
+      /* high light previous selected item */
+      :global(.is-selected) {
+        color: #fff;
+        background-color: $primary-green;
+      }
+      /* hover effect */
+      > div:hover {
+        color: #fff;
+        background-color: $primary-green;
+      }
+      > .selected {
+        color: #fff;
+        background-color: $primary-green;
+      }
+    }
+  }
+}
+
+.table-default .row {
+  border: none;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.unit {
+  width: 60px;
+}
+
+.error-container {
+
+}
+
+.error-box {
+  position: absolute;
+  top: 4.2rem;
+  left: 0.2rem;
+  width: 15rem;
+
+}
+
+.error-box-hidden {
+  display: none;
+}

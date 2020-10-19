@@ -1,0 +1,166 @@
+@import "app/css/variables.css";
+@import "app/css/mixins.css";
+
+$default-line-height: 2.8rem;
+
+.container {
+  @mixin flex-box column, flex-start, stretch;
+  /* max-height: $default-max-content-height; */
+  width: 100%;
+  flex: 1;
+}
+
+.patient-status {
+  padding: 1rem;
+  padding-right: 5rem;
+  height: 6rem;
+  background-color: $background-primary-color;
+  border-radius: $normal-border-radius;
+  @mixin flex-box row, center, center;
+  flex-wrap: wrap;
+}
+
+.status-item {
+  @mixin flex-box row, flex-start, center;
+  height: 2rem;
+  &:before {
+    content: '●';
+    margin-right: 0.5rem;
+  }
+  &:nth-child(odd) {
+    width: 40%;
+  }
+  &:nth-child(even) {
+    width: 60%;
+  }
+}
+
+.main-content {
+  @mixin flex-box row, center, stretch;
+  margin-top: 1rem;
+  min-height: $default-content-height;
+  background-color: $background-primary-color;
+  border-radius: $normal-border-radius;
+  overflow: hidden;
+  flex: 1;
+}
+
+.column {
+  @mixin flex-box column, stertch, center;
+  flex: 1;
+  padding: 1rem;
+}
+
+.column-in-left {
+  composes: column;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-top: 2rem;
+}
+
+.col-1 {
+  composes: column-in-left;
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    height: 90%;
+    right: 0px;
+    top: 5%;
+    width: 3px;
+    border-left: 1px solid color($default-border-color b(+30%));
+    border-right: 1px solid white;
+  }
+}
+
+.col-2 {
+  composes: column-in-left;
+  border-right: 2px solid $default-border-color;
+}
+
+.col-3 {
+  composes: column;
+  padding: 0px;
+  width: 400px;
+  background-color: white;
+}
+
+.title {
+  align-self: stretch;
+  @mixin flex-box row, flex-start, center;
+  font-size: 1.3rem;
+  font-weight: bolder;
+  padding-bottom: 1rem;
+}
+
+.test-date {
+  margin-left: auto;
+  font-weight: normal;
+}
+
+.gray {
+  @mixin circle-symbol;
+}
+
+.red {
+  @mixin circle-symbol color(red l(-10%));
+}
+
+.orange {
+  @mixin circle-symbol orange;
+}
+
+.green {
+  @mixin circle-symbol green;
+}
+
+@define-mixin circle-symbol-critical $color: gray, $size: 3rem {
+  @mixin flex-box row;
+  font-size: calc($size / 2);
+  border-radius: calc($size / 2);
+  color: white;
+  background-color: color($color);
+  border: 2px solid white;
+  box-shadow: 0 0 0 3px #e0362b;
+  margin: 2.5px;
+  z-index: 10;
+}
+
+.critical {
+  @mixin circle-symbol-critical color(red l(-10%));
+}
+
+.inform-block {
+  @mixin flex-box row, flex-start, center;
+  padding-left: calc($default-line-height / 2);
+  padding-right: calc($default-line-height / 2);
+  width: 100%;
+  height: $default-line-height;
+  border-radius: calc($default-line-height / 2);
+  border: 1px solid $whiteBorderColor;
+  background-color: white;
+}
+
+.number-of-record {
+  font-size: 1.3rem;
+  font-weight: bolder;
+  margin-right: 0.3rem;
+}
+
+.signals {
+  @mixin flex-box row, flex-end, center;
+  min-width: 10rem;
+  margin-left: auto;
+  >* {
+    &:not(:last-child) {
+      margin-right: 0.5rem;
+    }
+  }
+}
+
+.list-block {
+  margin-top: 1rem;
+  margin-left: 1rem;
+  align-self: stretch;
+}

@@ -1,0 +1,83 @@
+@import "app/css/variables.css";
+@import "app/css/mixins.css";
+
+$point-size: 15px;
+$height: 150px;
+$width: 50px;
+
+.container {
+  @mixin flex-box column, flex-start, center;
+}
+
+.slider {
+  width: $width;
+  height: $height;
+  position: relative;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.input[type="range"] {
+  position: absolute;
+  left: calc(-100%);
+  top: $width;
+  transform: rotate(270deg);
+  -webkit-appearance: none;
+  width: $height;
+  height: $width;
+  overflow:hidden;
+  outline : none;      /* 避免點選會有藍線或虛線 */
+  background:none;
+
+  &::-webkit-slider-runnable-track {
+    position: relative;
+    width: $height;
+    height: 5px;
+    background: color($lightgray-color w(+ 100%) a(- 50%));
+    border: none;
+    border-radius: 3px;
+  }
+  &:active::-webkit-slider-runnable-track {
+    background: color($lightgray-color w(+ 100%) a(- 20%));;
+  }
+
+  &::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    position: absolute;
+    top: calc(-5px);
+    width: $point-size;
+    height: $point-size;
+    background-color: $primary-green;
+    border-radius: 50%;
+    transition: .2s;
+  }
+}
+
+.btn {
+  @mixin round-box 0.5rem;
+  height: 30px;
+  width: 30px;
+  box-shadow: none;
+  border: none;
+  outline: none;
+  background-color: #fff;
+  border: 1px solid $lightgray-color;
+  &:focus {
+    color: #fff;
+    background-color: color($lightgray-color a(- 70%));
+  }
+
+  &:hover {
+    color: #fff;
+    background-color: color($lightgray-color a(- 70%));
+  }
+
+  &:active {
+    color: #fff;
+    background-color: color($lightgray-color a(- 30%));
+  }
+
+  &:disabled {
+    background-color: #aaa;
+  }
+}

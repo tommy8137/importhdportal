@@ -1,0 +1,20 @@
+
+.checkbox {
+  display: none;
+}
+
+.label {
+  display: inline-block;
+  /* width: 24px; */
+  padding-left: calc(24px + 1rem);
+  height: 24px;
+  background: url(./checkbox.png) no-repeat;
+}
+
+.checkbox:disabled + .label {
+  color: gray;
+}
+
+.checkbox:checked + .label {
+  background-image: url(./checkbox_on.png);
+}

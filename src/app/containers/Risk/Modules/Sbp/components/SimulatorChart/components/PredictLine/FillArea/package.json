@@ -1,0 +1,6 @@
+{
+  "name": "FillArea",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./FillArea.js"
+}

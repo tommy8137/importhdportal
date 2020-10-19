@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+message About {
+  string version = 1;
+  string license_key = 2;
+  string valid_date = 3;
+}
+
+message Licenses {
+  string license_key = 1;
+}

@@ -1,0 +1,74 @@
+@import "app/css/mixins.css";
+@import "app/css/variables.css";
+
+
+.table-default {
+  font-size: 1.0rem;
+  line-height: 1.4rem;
+  @mixin flex-box column, center, stretch;
+  width: 100%;
+  flex: 1;
+  border: $default-border;
+  border-bottom: none;
+
+
+
+  .body {
+    flex: 1;
+    @mixin flex-box column, flex-start, stretch;
+  }
+
+  .row {
+    @mixin flex-box row;
+    min-height: $table-row-height;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+
+    &:nth-child(even) {
+
+    }
+    &:nth-child(odd) {
+
+    }
+    border-bottom: $default-border;
+  }
+
+  .cell {
+    @mixin flex-box;
+    flex: 1;
+    color: $lightgray-color;
+    padding: 0.2em;
+    text-align: center;
+  }
+}
+
+.header {
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  font-weight: bold;
+  min-height: $table-row-height;
+  @mixin flex-box;
+  background: rgb(200, 200, 200);
+  border-bottom: $default-border;
+}
+
+.shadow-input {
+  width: 100%;
+  outline: 0;
+  border: none;
+  box-shadow: 0px 0px 2px 2px inset;
+  text-align: center;
+  line-height: 1.8rem;
+
+  &:focus {
+    box-shadow: 0px 0px 1px 2px $primary-green inset;
+  }
+}
+
+.shadow-input-error {
+  composes: shadow-input;
+  box-shadow: 0px 0px 1px 2px red inset;
+  &:focus {
+    box-shadow: 0px 0px 1px 2px red inset;
+  }
+}

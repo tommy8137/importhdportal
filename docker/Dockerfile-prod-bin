@@ -1,0 +1,21 @@
+FROM ubuntu:16.04
+
+RUN apt-get update && \
+apt-get install -y --no-install-recommends dmidecode libgcc-5-dev libstdc++6 \ 
+  locales \
+  build-essential fonts-wqy-zenhei libfontconfig && \
+  apt-get -q clean -y && \
+  rm -rf /var/lib/apt/lists/* && \
+  rm -f /var/cache/apt/*.bin && \
+  locale-gen zh_TW.UTF-8 && \
+  DEBIAN_FRONTEND=noninteractive dpkg-reconfigure locales && \
+  locale-gen zh_TW.UTF-8
+ENV LANG zh_TW.UTF-8
+ENV LANGUAGE zh_TW:zh
+ENV LC_ALL zh_TW.UTF-8
+
+ADD output  /web-portal/
+WORKDIR /web-portal
+VOLUME [ "/web-portal/logs" ]
+
+CMD ["./app.bin"]

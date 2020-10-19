@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+message Libs {
+  repeated Category categories = 1;
+}
+message Category {
+  int32 c_id = 1;
+  string c_name = 2;
+  repeated Module modules = 3;
+}
+message Module {
+  int32 m_id = 1;
+  string m_name = 2;
+}

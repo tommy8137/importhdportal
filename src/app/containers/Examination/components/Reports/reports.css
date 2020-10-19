@@ -1,0 +1,98 @@
+@import "app/css/variables.css";
+@import "app/css/mixins.css";
+@import "../../examination.css";
+
+$report-header-height: 86px;
+
+.table-wrapper {
+  width: 398px;
+  height: 100%;
+  background: #eee;
+  border-radius: 0 8px 8px 0;
+}
+
+.table-body {
+  @mixin flex-box column, flex-start, stretch;
+  height: calc(100% - $report-header-height);
+  background: #ddd;
+  overflow-y: auto;
+}
+
+.table-rows {
+
+}
+
+.table-row {
+  @mixin flex-box row, center, left;
+  min-height: 45px;
+  padding: 0;
+  margin: 0;
+  font-size: 1.1rem;
+  color: #585858;
+  align-items: center;
+  &:nth-child(even) {
+    background: #ddd;
+  }
+
+  &:nth-child(odd) {
+    background: #fff;
+  }
+
+  &:hover {
+    background: $table-hover-background;
+  }
+}
+
+.table-body-row {
+  composes: table-row;
+  cursor: pointer;
+}
+
+.table-body-row-selected {
+  composes: table-body-row;
+  background: #c6bd9d !important;
+}
+
+.table-date {
+  composes: table-row;
+  justify-content: flex-start;
+  padding-left: 13px;
+  height: 46px;
+}
+
+.table-head {
+  composes: table-row;
+  background: $primary-green !important;
+  text-shadow: 1px 1px #555;
+  color: #fff;
+  justify-content: center;
+  font-size: 1.1rem;
+  min-height: 40px;
+  padding: 0;
+}
+
+.table-title-text {
+  cursor: default;
+}
+
+.table-cell {
+  text-align: center;
+  word-wrap:break-word;
+  &:nth-child(1) {
+    width: 88px;
+  }
+
+  &:nth-child(2) {
+    width: 88px;
+    text-align: left;
+  }
+
+  &:nth-child(3) {
+    width: 88px;
+  }
+
+  &:nth-child(4) {
+    flex: 1;
+  }
+
+}

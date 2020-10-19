@@ -1,0 +1,44 @@
+syntax = "proto3";
+
+message Overview {
+  int32 total = 1;
+  int32 attended = 2;
+  int32 not_attend = 3;
+  int32 normal = 4;
+  int32 abnormal = 5;
+  repeated PieChart pie_chart = 6;
+}
+
+message PieChart {
+  string c_name = 1;
+  string c_id = 2;
+  int32 number = 3;
+  repeated ChartDetail chart_detail = 4;
+}
+
+message ChartDetail {
+  string type = 1;
+  int32 number = 2;
+}
+
+message AbnormalList {
+  repeated Abnormal abnormal_list = 1;
+}
+message Abnormal {
+  string name = 1;
+  string gender = 2;
+  string patient_id = 3;
+  string bed_no = 4;
+  string r_id = 5;
+  int32 age = 6;
+  repeated RiskCategory risk_category = 7;
+  int32 alarm_status = 8;
+  string hemarea = 9;
+  string sbp_time = 10;
+  string risk_time = 11;
+}
+message RiskCategory {
+  string c_id = 1;
+  string c_name = 2;
+  string type = 3;
+}

@@ -1,0 +1,23 @@
+{
+  "bail": true,
+  "verbose": true,
+  "moduleDirectories": ["node_modules", "src", "app", "common"],
+  "modulePaths": ["<rootDir>/src/app/"],
+  "roots": ["test/app"],
+  "testEnvironment": "jsdom",
+  "moduleFileExtensions": ["js", "jsx", "json", "ts", "proto"],
+  "moduleNameMapper": {
+    "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/tools/test/__mocks__/file-mock.js",
+    "\\.(css|less)$": "identity-obj-proxy"
+  },
+  "testRegex": "\\.js$",
+  "testPathIgnorePatterns": ["/v1alpha/"],
+  "setupFiles": [
+    "<rootDir>/node_modules/babel-jest/build/index.js",
+    "<rootDir>/tools/test/setup-test-client-env.js"
+  ],
+  "transform": {
+    "\\.proto$": "<rootDir>/tools/test/transform/protoTransformer.js",
+    "^.+\\.js$": "<rootDir>/node_modules/babel-jest"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "SimulatorChart",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./SimulatorChart.js"
+}

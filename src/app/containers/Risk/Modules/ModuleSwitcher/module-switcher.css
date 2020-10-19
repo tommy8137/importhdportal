@@ -1,0 +1,16 @@
+@import "app/css/mixins.css";
+@import "../../variables.css";
+
+.content {
+  width: 100%;
+  @mixin flex-box row, flex-start, stretch;
+  flex-wrap: nowrap;
+  flex: 1;
+}
+
+.background-image {
+  margin-top: calc($filter-bar-height + 2rem);
+  margin-left: 5rem;
+  width: 750px;
+  height: 350px;
+}

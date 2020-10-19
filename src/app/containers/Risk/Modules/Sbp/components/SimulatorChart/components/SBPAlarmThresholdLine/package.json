@@ -1,0 +1,6 @@
+{
+  "name": "SBPAlarmThresholdLine",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./SBPAlarmThresholdLine.js"
+}

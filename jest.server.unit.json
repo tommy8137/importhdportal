@@ -1,0 +1,27 @@
+{
+  "bail": true,
+  "verbose": true,
+  "moduleDirectories": ["node_modules", "src", "server", "common"],
+  "modulePaths": ["<rootDir>/src/app/"],
+  "roots": [
+    "<rootDir>/test/server/",
+    "<rootDir>/src/server/api/maya/"
+  ],
+  "testEnvironment": "node",
+  "moduleFileExtensions": ["js", "jsx", "json", "ts", "proto"],
+  "moduleNameMapper": {
+    "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/tools/test/__mocks__/file-mock.js",
+    "\\.(css|less)$": "identity-obj-proxy"
+  },
+  "testRegex": "test\/server\/unit\/.*\\.js$",
+  "testPathIgnorePatterns": ["/report/"],
+  "setupFiles": [
+    "<rootDir>/node_modules/babel-jest/build/index.js",
+    "<rootDir>/tools/test/setup-test-server-env.js"
+  ],
+  "setupTestFrameworkScriptFile": "<rootDir>/tools/test/setup-test-framework.js",
+  "transform": {
+    "\\.proto$": "<rootDir>/tools/test/transform/protoTransformer.js",
+    "^.+\\.js$": "<rootDir>/node_modules/babel-jest"
+  }
+}

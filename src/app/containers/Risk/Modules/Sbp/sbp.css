@@ -1,0 +1,9 @@
+@keyframes new-arrival-animate {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.new-arrival-pt {
+  animation: new-arrival-animate 1.5s infinite alternate;
+  stroke: red;
+}

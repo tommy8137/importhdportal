@@ -1,0 +1,32 @@
+$appWidth: 1280px;
+$footer-height: 50px;
+$datePickerWidth: 200px;
+$fontFamily: Arial;
+
+$header-height: 90px;
+
+$primary-green: #50b4aa;
+$primary-green--hover: #3CA096;
+$primary-green--active: #288C82;
+
+
+$lightgray-color: rgba(100, 100, 100, 1);
+$whiteBorderColor: silver;
+$background-primary-color: color(white a(80%)); /*#dbdcdd*/
+
+$normal-border-radius: 8px;
+$componentSingleLineHeight: 36px;
+$table-row-height: 2.0em;
+$default-border-color: rgba(182, 182, 182, 1);
+$default-border: 1px solid $default-border-color;
+$default-content-height: 536px;
+$default-max-content-height: calc(100vh - $header-height - $footer-height - 1rem);
+$default-padding: 20px;
+
+$border-thin: 1px;
+
+$tab-width: 300px;
+
+/* Patient-Search */
+$primary-orange-color: #fc8849;
+$table-hover-background: rgba(80, 180, 170, 0.3);

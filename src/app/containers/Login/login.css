@@ -1,0 +1,43 @@
+@import "app/css/variables.css";
+@import "app/css/mixins.css";
+@import "app/css/components.css";
+
+.container {
+  height: 100%;
+  /* margin-left: auto;
+  margin-right: auto; */
+  flex: 1;
+  overflow: auto;
+  @mixin flex-box column, flext-start, center;
+  @media (max-width: 600px) {
+    align-items: baseline;
+  }
+}
+
+.inner {
+  overflow: auto;
+  min-width: 600px;
+  min-height: 326px;
+  height: calc(100% - $header-height);
+  @mixin flex-box column, center, center;
+}
+
+.title {
+  @mixin flex-box row;
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+  color: white;
+  border: 1px solid white;
+  composes: circle-box;
+  width: 400px;
+}
+
+.foot-container {
+  min-width: 600px;
+  @media (max-width: $appWidth) {
+    width: 100vw;
+  }
+  @media (min-width: $appWidth) {
+    width: $appWidth;
+  }
+}

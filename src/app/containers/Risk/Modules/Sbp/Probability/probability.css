@@ -1,0 +1,80 @@
+@import "app/css/mixins.css";
+@import "../../../variables.css";
+@import "app/css/variables.css";
+@import "../sbp.css";
+
+$range-css: "../Range/range.css";
+
+.container {
+  flex: 1;
+  @mixin flex-box row, flex-start, stretch;
+}
+
+.column-left {
+  composes: column-left from $range-css;
+}
+
+.column-right {
+  composes: column-right from $range-css;
+}
+
+.legend-container {
+  composes: legend-container from $range-css;
+}
+
+.legend {
+  composes: legend from $range-css;
+  &:before {
+    content: '';
+  }
+}
+
+.actual-legend {
+  composes: actual-legend from $range-css;
+}
+
+.predict-legend {
+  composes: predict-legend from $range-css;
+  &:before {
+    content: url('../images/predict_icon_a.png');
+  }
+}
+
+.simulate-legend {
+  composes: simulate-legend from $range-css;
+  &:before {
+    content: url('../images/predict_icon_b.png');
+  }
+}
+
+.chart-container {
+  composes: chart-container from $range-css;
+}
+
+.simulator {
+  composes: simulator from $range-css;
+}
+
+.time {
+  composes: time from $range-css;
+}
+
+.predict_uf_comment {
+  composes: predict_uf_comment from $range-css;
+}
+
+.tag {
+  composes: tag from $range-css;
+}
+
+.section {
+  composes: section from $range-css;
+}
+
+.section-form {
+  composes: section-form from $range-css;
+}
+
+.filter-and-legend {
+  composes: filter-and-legend from $range-css;
+}

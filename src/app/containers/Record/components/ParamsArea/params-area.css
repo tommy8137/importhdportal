@@ -1,0 +1,150 @@
+@import "app/css/mixins.css";
+@import "app/css/variables.css";
+@import "app/components/Svg/Symbol/symbol.css";
+
+$green: #00a29a;
+$red: #cf6c79;
+$brown: #956134;
+
+.container {
+  width: 380px;
+  /* flex: 1; */
+  @mixin flex-box column, flex-start, stretch;
+  padding: 1rem;
+  padding-right: 0rem;
+}
+
+.row {
+  @mixin flex-box row, stretch, center;
+  flex-wrap: wrap;
+}
+
+.row-title {
+  composes: row;
+  justify-content: flex-start;
+  align-items: baseline;
+  /* margin-right: 1.5rem; */
+}
+
+.row-buttons {
+  composes: row;
+  margin-top: 2rem;
+  /* justify-content: space-around; */
+}
+
+.record-title {
+  font-weight: bolder;
+  font-size: 1.2rem;
+  margin-right: 0.5rem;
+}
+
+.button {
+  line-height: 1rem;
+  @mixin round-box 2.8rem;
+  @mixin flex-box row, flex-start, center;
+  width: 170px;
+  background-color: white;
+  /* border-color: gray;
+  color: gray; */
+  margin-bottom: 1rem;
+  position: relative;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  &:before {
+    position: absolute;
+    font-family: Icons;
+    left: 0.5rem;
+    top: 0.2rem;
+  }
+
+  &:focus {
+    outline: none;
+    /* outline: 1px solid color(cyan a(50%)); */
+    /* box-shadow: 0 0 1px 1px color(blue w(+50)); */
+  }
+
+  &:hover {
+    /* outline: none; */
+    box-shadow: 0 0 1px 1px color(blue w(+70));
+  }
+
+  &:active {
+    color: gray;
+    border: 2px solid color(gray b(+20%));
+  }
+
+  &:nth-child(even) {
+    margin-left: 0.2rem;
+  }
+
+  &:nth-child(odd) {
+    margin-right: 0.2rem;
+  }
+}
+
+
+
+.value {
+  margin-left: auto;
+  font-weight: bolder;
+  color: orange;
+}
+
+
+
+
+.button-inactive {
+  composes: button;
+  composes: type-inactive;
+  /* from '../../../../components/Svg/Symbol/symbol.css'; */
+}
+
+@for $i from 0 to 19 {
+  .button-$i {
+    composes: button;
+    composes: type-$(i);
+    /* from '../../../../components/Svg/Symbol/symbol.css'; */
+  }
+}
+
+.row-horizontal-center {
+  composes: row;
+  justify-content: center;
+}
+
+.button-clear {
+  composes: button;
+  background-color: $primary-green;
+  color: white;
+  border: 1px solid gray;
+  align-self: center;
+  justify-content: center;
+
+  &:hover {
+    background-color: $primary-green--hover;
+  }
+
+  &:active {
+    background-color: $primary-green--active;
+  }
+}
+
+.empty {
+  composes: button;
+  visibility: hidden;
+}
+
+.icon {
+  position: absolute;
+  top: 0.3rem;
+  left: 0.5rem;
+}
+
+
+.type-block {
+  @mixin flex-box column, center, flex-start;
+  margin-left: 0.5rem;
+  /* line-height: 1rem; */
+}

@@ -1,0 +1,237 @@
+{
+  "Account": "帐号", //G0001
+  "Password": "密码", //G0002
+  "Login": "登录", //G0003
+  "Clear": "清除", //G0004
+  "Account or Password is not correct": "帐号或密码不正确", //G0005
+  "Your account has been locked for security reasons. Please contact with administrator": "基于资讯安全因素，您的帐号已被锁定，请洽系统管理员。", //G0006
+  "License has expired. Please contact with administrator.": "授权码已过期，请洽系统管理员", //G0007
+  "I agree to follow this End-User License Agreement.": "我同意并且愿意遵守此系统的使用者授权条款", //G0008
+  "Confirm": "确认", //G0009
+  "Cancel": "取消", //G0010
+  "Patients Overview": "病患全览", //G0011
+  "Dashboard": "仪表板", //G0012
+  "Dialyze Records": "血液透析纪录", //G0013
+  "Lab Data": "血液检验表", //G0014
+  "Risk Analysis": "风险评估", //G0015
+  "Hi": "您好", //G0016
+  "zh-tw": "繁體中文", //G0017
+  "zh-cn": "简体中文", //G0018
+  "en": "English", //G0019
+  "Settings": "设定", //G0020
+  "About": "关于系统", //G0021
+  "Timeout Setting": "闲置时间设定", //G0022
+  "Timeout": "闲置时间", //G0023
+  "min": "分钟", //G0024
+  "Change": "确定", //G0025
+  "Please enter 1 to 240.": "请输入1〜240的数字", //G0026
+  "System Report": "系统日志", //G0027
+  "Log Export": "汇出", //G0028
+  "Version": "版本资讯", //G0029
+  "License Key": "授权码", //G0030
+  "My Profile": "个人资料", //G0031
+  "License Agreement": "授权条款", //G0032
+  "Profile Info": "个人资料", //G0033
+  "ID": "帐号", //G0034
+  "Name": "姓名", //G0035
+  "Display Name": "昵称", //G0036
+  "Department": "部门单位", //G0037
+  "Position": "职称", //G0038
+  "Phone": "连络电话", //G0039
+  "E-mail": "电子邮件", //G0040
+  "Overview": "总览", //G0041
+  "Search": "搜寻", //G0042
+  "All": "全部", //G0043
+  "Total": "应到人数", //G0044
+  "Attended": "已到人数", //G0045
+  "Abnormal": "风险人数", //G0046
+  "Not Attend": "未到", //G0047
+  "Abnormal2": "异常", //G0048
+  "Normal": "正常", //G0049
+  "Bed No.": "床号", //G0050
+  "Gender": "性别", //G0051
+  "Age": "年龄", //G0052
+  "Risk Category": "风险类别", //G0053
+  "Today's Patients": "本日患者", //G0054
+  "Enter name or ID": "请输入患者姓名或ID", //G0055
+  "Date": "日期", //G0057
+  "Schedule": "透析班次", //G0058
+  "Record No": "病历号", //G0059
+  "Gender2": "性別", //G0060
+  "Status": "透析进度", //G0061
+  "Weight (Before/After)": "透析前/后体重", //G0062
+  "Anticoagulation bolus dose": "抗凝剂使用量", //G0063
+  "Continuous infusion": "维持量", //G0064
+  "Circulation": "循环量", //G0065
+  "BP (Pre-dialysis)": "血压（透析前）", //G0066
+  "BP (Post-Dialysis)": "血压（透析后）", //G0067
+  "records include": "项纪录数值中", //G0068
+  "Handled ": "已处理", //G0069
+  "More": "显示更多", //G0070
+  "Less": "隐藏详细", //G0071
+  "Risk Summary": "风险项目列表", //G0072
+  "Module": "风险评估模组", //G0073
+  "Please Select": "请选择", //G0074
+  "Actual SBP": "实际收缩压", //G0075
+  "Predict Range": "预测范围", //G0076
+  "Simulate Range": "模拟范围", //G0077
+  "Time": "时间", //G0078
+  "Value": "数值", //G0079
+  "Item": "透析项目", //G0080
+  "Actual": "实际值", //G0081
+  "Simulation": "模拟值", //G0082
+  "Conductivity": "电导率", //G0083
+  "Dialysate Temp.": "机器温度", //G0084
+  "UFR": "超滤率", //G0085
+  "Blood Flow": "血液流率", //G0086
+  "Total UF": "总脱水量", //G0087
+  "Dialysate Flow": "透析液流率", //G0088
+  "TMP": "跨膜压", //G0089
+  "Simulate": "模拟", //G0090
+  "Dialysate Temp.2": "机器温度", //G0091
+  "Dialysate": "透析液压", //G0092
+  "Syringe Volume": "肝素量累计值", //G0093
+  "%s Dialysis in This Month": "本月第%s次透析", //G0094
+  "Clear All": "清除全部", //G0095
+  "SBP": "收缩压", //G0096
+  "DBP": "舒张压", //G0097
+  "VP": "静脉压", //G0098
+  "Pulse": "脉搏", //G0099
+  "UF": "超滤量", //G0100
+  "Intra": "透析中", //G0101
+  "Pre": "透析前", //G0102
+  "Post": "透析后", //G0103
+  "Always Show": "永远显示", //G0104
+  "User Login": "用户登录", //G0105
+  "Copyrigh 2016 Wistron Corporation. All rights reserved.": "Copyright © 2016 Wistron  Medical Tech  Corporation. All rights reserved.&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;所有数据资讯仅供参考。请依医生专业及实际状况进行判断", //G0106
+  "Reminding": "提醒", //G0107
+  "Symptom": "症状", //G0108
+  "Treatment": "处置", //G0109
+  "Order": "医嘱", //G0110
+  "Status2": "状态", //G0111
+  "Item2": "检验项目", //G0112
+  "Tendency ": "趋势箭头", //G0113
+  "Value2": "检查数值", //G0114
+  "Valid Date": "有效期", //G0115
+  "%s y": "%s 岁", //G0116
+  "%s bed ": "%s 床", //G0117
+  "Chronic Disease:": "慢性病：", //G0118
+  "Risk Category (Cases)": "风险类别（人次）", //G0119
+  "Attended %s  ": "已到 %s人", //G0120
+  "Not Attend %s": "未到 %s人", //G0121
+  "Abnormal %s": "风险 %s人", //G0122
+  "Normal %s": "正常 %s人", //G0123
+  "Abnormal Case List": "风险病历列表", //G0124
+  "Note": "纪录", //G0125
+  "N/S": "补充液", //G0126
+  "AP": "动脉压", //G0127
+  "Conductivity2": "电导率", //G0128
+  "RR": "呼吸次数", //G0129
+  "BP": "血压", //G0130
+  "SBP Variation": "SBP变化量", //G0131
+  "DM": "糖尿病", //G0132
+  "Probability of SBP while %s": "SBP%s的或然率", //G0133
+  "Reference Value of SBP": "收缩压参考値设置", //G0134
+  "Above": "大于", //G0135
+  "Below": "小于", //G0136
+  "Increase": "上升", //G0137
+  "Decrease": "下降", //G0138
+  "Predict": "预测", //G0139
+  "Simulate2": "模拟", //G0140
+  "Data expired, please refresh this page. Thank you.": "数据已失效，请刷新网页，谢谢", //G0141
+  "SBP Probability": "SBP或然率", //G0142
+  "Server no response, please contact system manager": "伺服器无回应，请联络系统管理员", //G0143
+  "Connection problem, please check your network connection and then try again. ": "发生连接问题，请确认你的网络，然后再试一次。", //G0144
+  "Value must between %s to %s": "数值必须介于 %s 至 %s 之间", //G0145
+  "Account must between %s to %s": "帐号必须介于 %s 至 %s 之间", //G0146
+  "Password must between %s to %s": "密码必须介于 %s 至 %s 之间", //G0147
+  "Finished": "完成", //G0148
+  "Under Dialysis": "透析中", //G0149
+  "Not Started": "尚未开始", //G0150
+  "Missing data, can not predict!": "资料不齐全，无法进行预测!", //G0151
+  "N/A": "无", //G0152
+  "Critical": "危急", //G0153
+  "Access Token is Incorrect": "验证资讯不正确", //G0154
+  "Previous": "前一笔", //G0155
+  "Next": "后一笔", //G0156
+  "Reset": "复位", //G0157
+  "Range": "落点区间", //G0158
+  "Probability": "或然率", //G0159
+  "Estimation": "估计值", //G0160
+  "Month": "月", //G0161
+  "Season": "季", //G0162
+  "Year": "年", //G0163
+  "Export": "汇出", //G0176
+  "Report": "报表", //G0177
+  "Q1.%s": "Q1.%s", //G0178
+  "Q2.%s": "Q2.%s", //G0179
+  "Q3.%s": "Q3.%s", //G0180
+  "Q4.%s": "Q4.%s", //G0181
+  "Accuracy Analysis Report": "准确率分析报表", //G0182
+  "Report Date": "报表产生日期", //G0183
+  "Data Period": "资料期间", //G0184
+  "Total Dialysis Times": "总透析人次", //G0185
+  "Total Number of Blood Pressure Measurements": "血压量测总次数", //G0186
+  "Accuracy Analysis Model": "准确率分析模型", //G0187
+  "Person-Time": "人次", //G0188
+  "Times": "次", //G0189
+  "System Evaluation Results Cross Comparison Table": "系统评估结果交叉比对表", //G0190
+  "Analyze the Number of Cases": "分析个案数", //G0191
+  "Clinical Case": "临床案例", //G0192
+  "Blood Pressure": "掉血压", //G0193
+  "Not Blood Pressure": "未掉血压", //G0194
+  "Summation": "加总", //G0195
+  "System Assessment": "系统评估", //G0196
+  "Model Accuracy Analysis Chart": "模型准确率分析图", //G0197
+  "Percentage": "百分比", //G0198
+  "Pre-Period": "前期", //G0199
+  "Current Period": "当期", //G0200
+  "Accuracy": "准确率", //G0201
+  "Sensitivity": "敏感度", //G0202
+  "Specificity": "特异度", //G0203
+  "Category": "项目", //G0204
+  "Blood Pressure Define": "掉血压定义", //G0205
+  "When the time": "时", //G0206
+  "Estimate Total UF": "预估总脱水量", //G0207
+  "Remark": "注", //G0208
+  "Treat Period is using 4 hours for caculating": "以透析4小时进行估计", //G0209
+  "Internal Server Error": "内部服务器错误", //G0210
+  "Process Status": "处理状态", //G0211
+  "Unprocessed": "未处理", //G0213
+  "Observation": "观察中", //G0214
+  "Suggestion": "建议值", //G0215
+  "Continue Observe": "持续观察", //G0216
+  "Observe": "观察", //G0217
+  "Treatment of Warning": "警示处置", //G0218
+  "Treatment Description": "处置说明", //G0219
+  "Get suggestion": "取得建议", //G0220
+  "Bring To": "带入模拟", //G0221
+  "Treatment Time": "处置时间", //G0223
+  "Hypotension Risk Alert": "低血压风险警报", //G0224
+  "No Hypotension Risk": "暂无低血压风险", //G0225
+  "Within an Hour": "一小时内", //G0226
+  "Warning Execution Rate": "警示处置执行率", //G0227
+  "Effectiveness of Risk": "风险警示处置成效", //G0228
+  "System Performance Analysis Report": "系统成效分析报表", //G0229
+  "Period": "期间", //G0230
+  "No Warning Data": "无警示资料", //G0231
+  "Record Time": "记录时间", //G0232
+  "Monthly": "月份", //G0233
+  "Dialysis Times": "透析人次", //G0234
+  "Blood Pressure Events": "掉血压事件数", //G0235
+  "Blood Pressure Rate": "掉血压事件发生率", //G0236
+  "No Adjust Parameters": "无调整参数", //G0237
+  "Adjust Parameters": "有调整参数", //G0238
+  "Execution Rate": "执行率", //G0239
+  "Analyze Data Period": "资料期间", //G0240
+  "Intra Record": "透析中记录", //G0241
+  "No Information": "暂无资料", //G0242
+  "No Warning Message": "无警示讯息", //G0243
+  "Edit": "编辑", //G0244
+  "Personal Alarm Threshold": "个人警示阈值", //G0245
+  "Upper Bound": "上界", //G0246
+  "Lower Bound": "下界", //G0247
+  "Submit": "送出", //G0248
+  "Alarm Threshold": "警示阈值", //G0249
+  "System Threshold": "系统阈值" //G0250
+}

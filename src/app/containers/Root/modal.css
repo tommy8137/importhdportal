@@ -1,0 +1,114 @@
+@import "app/css/variables.css";
+@import "app/css/mixins.css";
+
+.modal-class {
+  @mixin flex-box column, flex-start, center;
+  overflow: hidden;
+  width: 400px;
+  height: 200px;
+  border-style: solid;
+  border-color: $primary-green;
+  border-width: 3px;
+  border-radius: 8px;
+  padding: 10px;
+  padding-top: 2rem;
+  position: absolute;
+  outline: none;
+  top: calc(50% - 100px);
+  left: calc(50% - 200px);
+  background-color: white;
+  transform: rotateX(0deg);
+  opacity: 1;
+  box-shadow: 2px 2px 5px #888888, 0px 0px 5px 1px #888888 inset;
+  @media (max-width: 500px and min-width: 301px) {
+    /* width: 300px;
+    left: calc(50% - 150px); */
+  }
+}
+
+.modal-title {
+  @mixin flex-box row, flex-start, center;
+  height: 40px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid #888;
+  font-weight: bolder;
+}
+
+.modal-content {
+  text-align: center;
+}
+
+.icon-close {
+  cursor: pointer;
+  margin-left: auto !important;
+  color: #888;
+}
+
+.overlay-class {
+  z-index: 1002;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: color(black a(-80%));
+}
+
+:global {
+  .ReactModal__Overlay {
+    perspective: 600;
+    opacity: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  .ReactModal__Overlay--after-open {
+    opacity: 1;
+    transition: opacity 300ms ease-out;
+  }
+  .ReactModal__Content {
+    transform: scale(0.5) rotateX(45deg);
+  }
+
+  .ReactModal__Content--after-open {
+    transform: scale(1) rotateX(0deg);
+    transition: all 300ms ease-in;
+  }
+
+  .ReactModal__Overlay--before-close {
+    opacity: 0;
+  }
+
+  .ReactModal__Content--before-close {
+    transform: scale(0.5) rotateX(45deg);
+    transition: all 300ms ease-in;
+  }
+
+  .ReactModal__Content.modal-dialog {
+    border: none;
+    background-color: transparent;
+  }
+}
+
+.icon-type {
+  content: url('./images/icon_info.png');
+  margin-bottom: 1rem;
+}
+
+.icon-alert {
+  composes: icon-type;
+  content: url('./images/icon_alert.png');
+}
+
+.icon-info {
+  composes: icon-type;
+  content: url('./images/icon_info.png');
+}
+
+.icon-warning {
+  composes: icon-type;
+  content: url('./images/icon_warnning.png');
+}
+
+.button-confirm {
+  margin-top: 1rem;
+}

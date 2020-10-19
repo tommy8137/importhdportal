@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+message ReqSbp {
+  string hdrec_id = 1;
+  string sbp_time = 2;
+  int32 ev_status = 3;
+  string ev_situation = 4;
+  string ev_process = 5;
+  string ev_time = 6;
+}
+
+message ReqSbpDart {
+  string hdrec_id = 1;
+  string sbp_time = 2;
+  int32 ev_status = 3;
+  string Subject = 4;
+  string DContent = 5;
+  string AContent = 6;
+  string RContent = 7;
+  string TContent = 8;
+  string Process_Date = 9;
+}

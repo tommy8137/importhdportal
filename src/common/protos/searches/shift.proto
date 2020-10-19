@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+message Shifts {
+  repeated Shift shifts = 1;
+  repeated string hemarea = 2;
+}
+message Shift {
+  int32 s_id = 1;
+  string s_name = 2;
+}

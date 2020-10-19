@@ -1,0 +1,82 @@
+@import "app/css/variables.css";
+@import "app/css/mixins.css";
+
+$default-line-height: 2.8rem;
+$exam-content-height: calc(100vh - $header-height - $footer-height - 1rem - 5.5rem);
+
+.container {
+  @mixin flex-box column, flex-start, stretch;
+  width: 100%;
+  flex: 1;
+}
+
+.main {
+  padding-left: 2rem;
+  min-height: 36rem;
+  height: $exam-content-height;
+  background-color: $background-primary-color;
+  border-radius: $normal-border-radius;
+  @mixin flex-box row, flex-start, flex-start;
+  border-top: 1px solid white;
+  border-left: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+.left {
+  @mixin flex-box column, flex-start, stretch;
+  padding-top: 1.5rem;
+  height: 100%;
+  width: 850px;
+  border-right: 1px solid #777;
+}
+
+.right {
+  @mixin flex-box row, flex-start, stretch;
+  height: 100%;
+  border-radius: 0 9px 9px 0;
+  overflow: hidden;
+}
+
+.advice {
+  &-title {
+
+  }
+
+  &-block {
+    @mixin flex-box row, center, center;
+    padding-left: 33px;
+    padding-right: 33px;
+    /*color: #777;
+    border: 2px solid #bbb;
+    border-radius: 7px;
+    background: white;*/
+    width: 820px;
+    height: 115px;
+  }
+
+}
+
+.current-item-name-label-wrapper {
+  display: flex;
+  height: 84px;
+  align-items: center;
+  padding-bottom: 24px;
+}
+
+.current-item-name-label {
+  @mixin round;
+  width: 155px;
+  box-shadow: none;
+  background: white;
+  font-size: 1rem;
+  word-wrap: break-word;
+  min-height: 36px;
+  height: auto;
+  padding: 5px 15px;
+  text-align: center;
+}
+
+/* chart */
+.chart {
+
+}

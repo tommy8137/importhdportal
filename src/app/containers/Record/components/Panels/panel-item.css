@@ -1,0 +1,63 @@
+@import "app/css/variables.css";
+@import "app/css/mixins.css";
+
+.item {
+  &:not(:last-child) {
+    /* margin-bottom: 0.5rem; */
+  }
+}
+
+.title {
+  @mixin round-box 2.8rem;
+  @mixin flex-box row, flex-start, center;
+  border: 1px solid;
+  border-color: $lightgray-color;
+  padding-left: 1rem;
+  cursor: pointer;
+
+  &:before {
+    content: '';
+    left: 1rem;
+    margin-right: 1rem;
+  }
+}
+
+.title-handled {
+  composes: title;
+  &:before {
+    @mixin circle-symbol orange, 1.6rem;
+  }
+}
+
+.title-handled-selected {
+  composes: title-handled;
+  border: 2px solid orange;
+  color: orange;
+}
+
+.time {
+  margin-left: auto;
+}
+
+.body {
+  margin-left: 2rem;
+  padding: 1rem;
+  line-height: 2rem;
+  border-left: 1px solid color($lightgray-color a(50%));
+  @mixin flex-box column, flex-start, flex-start;
+  height: auto;
+  transition: 0.5s all ease;
+}
+
+.section {
+  @mixin flex-box row, flex-start, flex-start;
+  line-height: 1.5rem;
+}
+
+.field {
+
+}
+
+.field-content {
+  flex: 1;
+}

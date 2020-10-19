@@ -1,0 +1,93 @@
+@import "app/css/variables.css";
+@import "app/css/mixins.css";
+@import "app/css/tables.css";
+@import "app/css/components.css";
+
+$padding-space: 1rem;
+$single-row-height: 3rem;
+
+.container {
+	@mixin flex-box column, flex-start, stretch;
+	flex: 1;
+}
+
+.operations {
+	margin-top: 0.5rem;
+	@mixin flex-box row, center, stretch;
+}
+
+.table-default {
+  border: none;
+}
+
+.header {
+  padding-left: 2.2rem;
+  padding-right: 2.2rem;
+}
+
+.row {
+  /*
+    now the post-import setting does not work
+    https://github.com/outpunk/postcss-modules/issues/13
+  */
+  line-height: $single-row-height;
+  border: none;
+  flex-wrap: wrap;
+  transition: max-height 0.5s, height 0.5s;
+  min-height: calc($single-row-height + 0.5rem);
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  &:nth-child(even) {
+    background: #fff;
+  }
+  &:nth-child(odd) {
+    background: #fff;
+  }
+  border-bottom: 1px solid #aaa;
+}
+
+.row-error {
+  composes: row;
+}
+
+.error-box {
+  @mixin flex-box row, center, flex-start;
+  color: white;
+  padding: 0.1rem;
+  position: absolute;
+
+  border-radius: 5px;
+  background: $primary-green;
+  height: 52px;
+  flex-basis: 100%;
+  font-size: 1rem;
+
+  z-index: 100;
+  right: 8.5rem;
+
+  width: 270px;
+  border: 2px solid white;
+  box-shadow: 3px 0px 3px -2px #888, -3px 0px 3px -2px #888;
+  transition: opacity 0.5s;
+  visibility: visible;
+  opacity: 1;
+
+  &:before {
+    position: absolute;
+    right: -0.6rem;
+    top: 15px;
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-left: 10px solid $primary-green;
+  }
+}
+
+.error-box-hidden {
+  composes: error-box;
+  transition: visibility 0s 0.5s, opacity 0.5s;
+  visibility: hidden;
+  opacity: 0;
+}

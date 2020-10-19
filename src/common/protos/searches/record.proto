@@ -1,0 +1,108 @@
+syntax = "proto3";
+
+message DialyzeList {
+  int32 total_nums = 1;
+  repeated Record records = 2;
+}
+message Record {
+  string r_id = 1;
+  string date = 2;
+  string tr_id = 3;
+}
+message Dialyze {
+  string r_id = 1;
+  int32 times_of_dialyze = 2;
+  string date = 3;
+  int64 start_time = 4;
+  int64 end_time = 5;
+  double dryweight = 6;
+  double temperature = 7;
+  double dialysateca1 = 8;
+  double dialysis_year = 9;
+  repeated Items items = 10;
+  Panellist panels = 11;
+  int32 status = 12;
+  repeated SbpAlarm sbp_alarm = 13;
+}
+message Items {
+  string ri_id= 1;
+  string name = 2;
+  string unit = 3;
+  string type = 4;
+  repeated Data data = 5;
+}
+message Data {
+  int64 time = 1;
+  double value = 2;
+  int32 status = 3;
+}
+message Panellist {
+  repeated Panel pre = 1;
+  repeated Panel intra = 2;
+  repeated Panel post = 3;
+}
+message Panel {
+  string pi_id = 1;
+  int64 time = 2;
+  string symptom = 3;
+  string treatment = 4;
+  string order = 5;
+  int32 status = 6;
+  string rectime = 7;
+}
+
+message SbpAlarm {
+  int64 time = 1;
+  int32 alarm_status = 2;
+  string alarm_phrase = 3;
+  string alarm_process  = 4;
+  string alarm_time = 5;
+  string process_time = 6;
+}
+
+message PanelDart {
+  string pi_id = 1;
+  int64 time = 2;
+  string Subject = 3;
+  string DContent = 4;
+  string AContent = 5;
+  string RContent = 6;
+  string TContent = 7;
+  string order = 8;
+  int32 status = 9;
+  string rectime = 10;
+}
+
+message PanelDartlist {
+  repeated PanelDart pre = 1;
+  repeated PanelDart intra = 2;
+  repeated PanelDart post = 3;
+}
+
+message DialyzeDart {
+  string r_id = 1;
+  int32 times_of_dialyze = 2;
+  string date = 3;
+  int64 start_time = 4;
+  int64 end_time = 5;
+  double dryweight = 6;
+  double temperature = 7;
+  double dialysateca1 = 8;
+  double dialysis_year = 9;
+  repeated Items items = 10;
+  PanelDartlist panels = 11;
+  int32 status = 12;
+  repeated SbpAlarmDart sbp_alarm = 13;
+}
+
+message SbpAlarmDart {
+  int64 time = 1;
+  int32 alarm_status = 2;
+  string Subject = 3;
+  string DContent = 4;
+  string AContent = 5;
+  string RContent = 6;
+  string TContent = 7;
+  string alarm_time = 8;
+  string process_time = 9;
+}

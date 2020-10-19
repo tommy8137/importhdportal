@@ -1,0 +1,58 @@
+syntax = "proto3";
+
+message Summary {
+  Status status_hightlight = 1;
+  DialyzeRecords dialyze_records = 2;
+  TestResult dialysis_test_result = 3;
+}
+message Status {
+  Weight weight = 1;
+  Blood sbp = 2;
+  Blood dbp = 3;
+  Heparin heparin_usage_status = 4;
+}
+message Weight {
+  double pre = 1;
+  double post = 2;
+}
+message Blood {
+  int32 pre = 1;
+  int32 post = 2;
+}
+message Heparin {
+  int32 start = 1;
+  int32 remain = 2;
+  int32 circulation = 3;
+}
+message DialyzeRecords {
+  string r_id = 1;
+  int32 total = 2;
+  repeated RecordAbnormal abnormal = 3;
+  repeated RecordHandled handled = 4;
+}
+message RecordAbnormal {
+  string symptom = 1;
+  string pi_id = 2;
+}
+message RecordHandled {
+  string symptom = 1;
+  string treatment = 2;
+  string pi_id = 3;
+}
+message TestResult {
+  string tr_id = 1;
+  string date = 2;
+  int32 total = 3;
+  repeated TestAbnormal abnormal = 4;
+  repeated TestCritical critical = 5;
+}
+message TestAbnormal {
+  string name = 1;
+  string value = 2;
+  string ti_id = 3;
+}
+message TestCritical {
+  string name = 1;
+  string value = 2;
+  string ti_id = 3;
+}

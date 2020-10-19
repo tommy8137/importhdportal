@@ -1,0 +1,23 @@
+FROM node:6.9.2-alpine
+
+# Create app directory
+RUN mkdir -p /web-portal/keys
+WORKDIR /web-portal
+
+RUN apk --update add --no-cache --virtual .build-deps git python make g++ zeromq-dev \
+  && apk --update add --no-cache zeromq \
+  &&  npm install zmq@2.15.3 -g -E \
+  &&  apk del .build-deps
+
+# require the global modules(zmq)
+ENV NODE_PATH=/usr/local/lib/node_modules
+
+# Bundle app source
+ADD build /web-portal/build
+ADD node_modules /web-portal/node_modules
+ADD build/config /web-portal/config
+
+VOLUME [ "/web-portal/logs" ]
+
+ENTRYPOINT [ "node" ]
+

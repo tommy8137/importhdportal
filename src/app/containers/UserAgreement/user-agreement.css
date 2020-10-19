@@ -1,0 +1,52 @@
+@import "app/css/variables.css";
+@import "app/css/mixins.css";
+
+.container {
+  @mixin flex-box column, flex-start, stretch;
+  min-height: 600px;
+  flex: 1;
+  min-width: 600px;
+  @media (max-width: $appWidth) {
+    width: 100vw;
+  }
+  @media (min-width: $appWidth) {
+    width: $appWidth;
+  }
+}
+
+.main {
+  @mixin flex-box column, center, flex-start;
+  flex: 1;
+}
+
+.form {
+  width: 90%;
+  min-height: 100px;
+  margin-top: 1rem;
+  align-self: center;
+}
+
+.agreement-description {
+  @mixin flex-box row, flex-start, center;
+  height: 3rem;
+}
+
+.buttons {
+  @mixin flex-box row, center, center;
+}
+
+.button {
+  @mixin round-box 2.6rem;
+  background: $primary-green;
+  border: 1px solid $default-border-color;
+  margin-right: 1rem;
+  min-width: 120px;
+  color: white;
+
+  &:active {
+    color: color(white b(+30%));
+  }
+  &:disabled {
+    color: lightgray;
+  }
+}

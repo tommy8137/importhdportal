@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+message AlarmLists {
+  repeated AlarmList AlarmLists = 1;
+}
+
+message AlarmList {
+  string alarm_phrase = 1;
+  repeated string alarm_process = 2;
+}
+
+message DartLists {
+  repeated DartList DartLists = 1;
+}
+
+message DartList {
+  string Subject = 1;
+  string DContent = 2;
+  repeated string AContent = 3;
+}

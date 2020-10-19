@@ -1,0 +1,14 @@
+FROM ubuntu:16.04
+
+RUN apt-get update && apt-get install -y build-essential curl && \
+  curl -sL https://deb.nodesource.com/setup_6.x | bash - && \
+  apt-get install -y nodejs git python make g++ bash dmidecode docker && \
+  apt-get -q clean -y && \
+  rm -rf /var/lib/apt/lists/* && \ 
+  rm -f /var/cache/apt/*.bin && \
+  npm install -g nexe@1.1.2
+ENV BABEL_DISABLE_CACHE=1
+ADD nexe_utf8_workaround/bundle.js /usr/lib/node_modules/nexe/lib/
+
+WORKDIR /web-portal-2.1
+CMD ["make","build-nexe", "docker"]

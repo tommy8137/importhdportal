@@ -1,0 +1,84 @@
+@import "app/css/variables.css";
+@import "app/css/mixins.css";
+
+.chart {
+  overflow: hidden;
+  /* @mixin flex-box row, flex-start, stretch; */
+  /* flex: 1; */
+  /* padding: 2rem;
+  padding-left: 1rem; */
+}
+
+.bg-line {
+  stroke: color(gray a(70%));
+  stroke-width: 0.7;
+}
+
+.bg-horizontal-line {
+  composes: bg-line;
+  stroke-dasharray: 5, 5;
+}
+
+.g-text {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.handled {
+  line {
+    stroke: orange;
+  }
+  text {
+    fill: orange;
+  }
+  rect {
+    fill: transparent;
+  }
+}
+
+
+
+.handled-selected {
+  composes: handled;
+
+  text {
+    fill: white;
+  }
+  rect {
+    fill: orange;
+  }
+}
+
+.abnormal {
+  line {
+    stroke: red;
+  }
+  text {
+    fill: red;
+  }
+  rect {
+    fill: transparent;
+  }
+}
+
+.abnormal-selected {
+  composes: abnormal;
+  text {
+    fill: white;
+  }
+  rect {
+    fill: red;
+  }
+}
+
+.x-axis {
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.current-line {
+  stroke-dasharray: 7, 3;
+  stroke: color(cyan l(-10%));
+  stroke-width: 2;
+}

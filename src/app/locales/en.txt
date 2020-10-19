@@ -1,0 +1,237 @@
+{
+  "Account": "Account", //G0001
+  "Password": "Password", //G0002
+  "Login": "Login", //G0003
+  "Clear": "Clear", //G0004
+  "Account or Password is not correct": "Account or Password is not correct", //G0005
+  "Your account has been locked for security reasons. Please contact with administrator": "Your account has been locked for security reasons. Please contact with administrator", //G0006
+  "License has expired. Please contact with administrator.": "License has expired. Please contact with administrator.", //G0007
+  "I agree to follow this End-User License Agreement.": "I agree to follow this End-User License Agreement.", //G0008
+  "Confirm": "Confirm", //G0009
+  "Cancel": "Cancel", //G0010
+  "Patients Overview": "Patients\\nOverview", //G0011
+  "Dashboard": "Dashboard", //G0012
+  "Dialyze Records": "Dialyze\\nRecords", //G0013
+  "Lab Data": "Lab Data", //G0014
+  "Risk Analysis": "Risk Analysis", //G0015
+  "Hi": "Hi", //G0016
+  "zh-tw": "繁體中文", //G0017
+  "zh-cn": "简体中文", //G0018
+  "en": "English", //G0019
+  "Settings": "Settings", //G0020
+  "About": "About", //G0021
+  "Timeout Setting": "Timeout Setting", //G0022
+  "Timeout": "Timeout", //G0023
+  "min": "min", //G0024
+  "Change": "Change", //G0025
+  "Please enter 1 to 240.": "Please enter 1 to 240.", //G0026
+  "System Report": "System Report", //G0027
+  "Log Export": "Log Export", //G0028
+  "Version": "Version", //G0029
+  "License Key": "License Key", //G0030
+  "My Profile": "My Profile", //G0031
+  "License Agreement": "License Agreement", //G0032
+  "Profile Info": "Profile Info", //G0033
+  "ID": "ID", //G0034
+  "Name": "Name", //G0035
+  "Display Name": "Display Name", //G0036
+  "Department": "Department", //G0037
+  "Position": "Position", //G0038
+  "Phone": "Phone", //G0039
+  "E-mail": "E-mail", //G0040
+  "Overview": "Overview", //G0041
+  "Search": "Search", //G0042
+  "All": "All", //G0043
+  "Total": "Total", //G0044
+  "Attended": "Attended", //G0045
+  "Abnormal": "Abnormal", //G0046
+  "Not Attend": "Not Attend", //G0047
+  "Abnormal2": "Abnormal", //G0048
+  "Normal": "Normal", //G0049
+  "Bed No.": "Bed No.", //G0050
+  "Gender": "Gender", //G0051
+  "Age": "Age", //G0052
+  "Risk Category": "Risk Category", //G0053
+  "Today's Patients": "Today's Patients", //G0054
+  "Enter name or ID": "Enter name or ID", //G0055
+  "Date": "Date", //G0057
+  "Schedule": "Schedule", //G0058
+  "Record No": "Record No", //G0059
+  "Gender2": "Gender", //G0060
+  "Status": "Status", //G0061
+  "Weight (Before/After)": "Weight (Before/After)", //G0062
+  "Anticoagulation bolus dose": "Anticoagulation bolus dose", //G0063
+  "Continuous infusion": "Continuous infusion", //G0064
+  "Circulation": "Circulation", //G0065
+  "BP (Pre-dialysis)": "BP (Pre-dialysis)", //G0066
+  "BP (Post-Dialysis)": "BP (Post-Dialysis)", //G0067
+  "records include": "records include", //G0068
+  "Handled ": "Handled ", //G0069
+  "More": "More", //G0070
+  "Less": "Less", //G0071
+  "Risk Summary": "Risk Summary", //G0072
+  "Module": "Module", //G0073
+  "Please Select": "Please Select", //G0074
+  "Actual SBP": "Actual SBP", //G0075
+  "Predict Range": "Predict Range", //G0076
+  "Simulate Range": "Simulate Range", //G0077
+  "Time": "Time", //G0078
+  "Value": "Value", //G0079
+  "Item": "Item", //G0080
+  "Actual": "Actual", //G0081
+  "Simulation": "Simulation", //G0082
+  "Conductivity": "Conductivity", //G0083
+  "Dialysate Temp.": "Dialysate Temp.", //G0084
+  "UFR": "UFR", //G0085
+  "Blood Flow": "Blood Flow", //G0086
+  "Total UF": "Total UF", //G0087
+  "Dialysate Flow": "Dialysate Flow", //G0088
+  "TMP": "TMP", //G0089
+  "Simulate": "Simulate", //G0090
+  "Dialysate Temp.2": "Dialysate Temp.", //G0091
+  "Dialysate": "Dialysate", //G0092
+  "Syringe Volume": "Syringe Volume", //G0093
+  "%s Dialysis in This Month": "%s Dialysis in This Month", //G0094
+  "Clear All": "Clear All", //G0095
+  "SBP": "SBP", //G0096
+  "DBP": "DBP", //G0097
+  "VP": "VP", //G0098
+  "Pulse": "Pulse", //G0099
+  "UF": "UF", //G0100
+  "Intra": "Intra", //G0101
+  "Pre": "Pre", //G0102
+  "Post": "Post", //G0103
+  "Always Show": "Always Show", //G0104
+  "User Login": "User Login", //G0105
+  "Copyrigh 2016 Wistron Corporation. All rights reserved.": "Copyright © 2016 Wistron Medical Tech Corporation. All rights reserved.&nbsp;&nbsp;&nbsp;\r\n&nbsp;&nbsp;&nbsp;All data is for reference only. The medical action should depend on the actual circumstances and medical professional’s advice.", //G0106
+  "Reminding": "Reminding", //G0107
+  "Symptom": "Symptom", //G0108
+  "Treatment": "Treatment", //G0109
+  "Order": "Order", //G0110
+  "Status2": "Status", //G0111
+  "Item2": "Item", //G0112
+  "Tendency ": "Tendency ", //G0113
+  "Value2": "Value", //G0114
+  "Valid Date": "Valid Date", //G0115
+  "%s y": "%s y", //G0116
+  "%s bed ": "%s bed ", //G0117
+  "Chronic Disease:": "Chronic Disease:", //G0118
+  "Risk Category (Cases)": "Risk Category (Cases)", //G0119
+  "Attended %s  ": "Attended %s  ", //G0120
+  "Not Attend %s": "Not Attend %s", //G0121
+  "Abnormal %s": "Abnormal %s", //G0122
+  "Normal %s": "Normal %s", //G0123
+  "Abnormal Case List": "Abnormal Case List", //G0124
+  "Note": "Note", //G0125
+  "N/S": "N/S", //G0126
+  "AP": "AP", //G0127
+  "Conductivity2": "Conductivity", //G0128
+  "RR": "RR", //G0129
+  "BP": "BP", //G0130
+  "SBP Variation": "SBP Variation", //G0131
+  "DM": "DM", //G0132
+  "Probability of SBP while %s": "Probability of SBP while %s", //G0133
+  "Reference Value of SBP": "Reference Value of SBP", //G0134
+  "Above": "Above", //G0135
+  "Below": "Below", //G0136
+  "Increase": "Increase", //G0137
+  "Decrease": "Decrease", //G0138
+  "Predict": "Predict", //G0139
+  "Simulate2": "Simulate", //G0140
+  "Data expired, please refresh this page. Thank you.": "Data expired, please refresh this page. Thank you.", //G0141
+  "SBP Probability": "SBP Probability", //G0142
+  "Server no response, please contact system manager": "Server no response, please contact system manager", //G0143
+  "Connection problem, please check your network connection and then try again. ": "Connection problem, please check your network connection and then try again. ", //G0144
+  "Value must between %s to %s": "Value must between %s to %s", //G0145
+  "Account must between %s to %s": "Account must between %s to %s", //G0146
+  "Password must between %s to %s": "Password must between %s to %s", //G0147
+  "Finished": "Finished", //G0148
+  "Under Dialysis": "Under Dialysis", //G0149
+  "Not Started": "Not Started", //G0150
+  "Missing data, can not predict!": "Missing data, can not predict!", //G0151
+  "N/A": "N/A", //G0152
+  "Critical": "Critical", //G0153
+  "Access Token is Incorrect": "Access Token is Incorrect", //G0154
+  "Previous": "Previous", //G0155
+  "Next": "Next", //G0156
+  "Reset": "Reset", //G0157
+  "Range": "Range", //G0158
+  "Probability": "Probability", //G0159
+  "Estimation": "Estimation", //G0160
+  "Month": "Month", //G0161
+  "Season": "Season", //G0162
+  "Year": "Year", //G0163
+  "Export": "Export", //G0176
+  "Report": "Report", //G0177
+  "Q1.%s": "Q1.%s", //G0178
+  "Q2.%s": "Q2.%s", //G0179
+  "Q3.%s": "Q3.%s", //G0180
+  "Q4.%s": "Q4.%s", //G0181
+  "Accuracy Analysis Report": "Accuracy Analysis Report", //G0182
+  "Report Date": "Report Date", //G0183
+  "Data Period": "Data Period", //G0184
+  "Total Dialysis Times": "Total Dialysis Times", //G0185
+  "Total Number of Blood Pressure Measurements": "Total Number of Blood Pressure Measurements", //G0186
+  "Accuracy Analysis Model": "Accuracy Analysis Model", //G0187
+  "Person-Time": "Person-Time", //G0188
+  "Times": "Times", //G0189
+  "System Evaluation Results Cross Comparison Table": "System Evaluation Results Cross Comparison Table", //G0190
+  "Analyze the Number of Cases": "Analyze the Number of Cases", //G0191
+  "Clinical Case": "Clinical Case", //G0192
+  "Blood Pressure": "Blood Pressure", //G0193
+  "Not Blood Pressure": "Not Blood Pressure", //G0194
+  "Summation": "Summation", //G0195
+  "System Assessment": "System Assessment", //G0196
+  "Model Accuracy Analysis Chart": "Model Accuracy Analysis Chart", //G0197
+  "Percentage": "Percentage", //G0198
+  "Pre-Period": "Pre-Period", //G0199
+  "Current Period": "Current Period", //G0200
+  "Accuracy": "Accuracy", //G0201
+  "Sensitivity": "Sensitivity", //G0202
+  "Specificity": "Specificity", //G0203
+  "Category": "Category", //G0204
+  "Blood Pressure Define": "Blood Pressure Define", //G0205
+  "When the time": "When the time", //G0206
+  "Estimate Total UF": "Estimate Total UF", //G0207
+  "Remark": "Remark", //G0208
+  "Treat Period is using 4 hours for caculating": "Treat Period is using 4 hours for caculating", //G0209
+  "Internal Server Error": "Internal Server Error", //G0210
+  "Process Status": "Process Status", //G0211
+  "Unprocessed": "Unprocessed", //G0213
+  "Observation": "Observation", //G0214
+  "Suggestion": "Suggestion", //G0215
+  "Continue Observe": "Continue Observe", //G0216
+  "Observe": "Observe", //G0217
+  "Treatment of Warning": "Treatment of Warning", //G0218
+  "Treatment Description": "Treatment Description", //G0219
+  "Get suggestion": "Get suggestion", //G0220
+  "Bring To": "Bring To", //G0221
+  "Treatment Time": "Treatment Time", //G0223
+  "Hypotension Risk Alert": "Hypotension Risk Alert", //G0224
+  "No Hypotension Risk": "No Hypotension Risk", //G0225
+  "Within an Hour": "Within an Hour", //G0226
+  "Warning Execution Rate": "Warning Execution Rate", //G0227
+  "Effectiveness of Risk": "Effectiveness of Risk", //G0228
+  "System Performance Analysis Report": "System Performance Analysis Report", //G0229
+  "Period": "Period", //G0230
+  "No Warning Data": "No Warning Data", //G0231
+  "Record Time": "Record Time", //G0232
+  "Monthly": "Monthly", //G0233
+  "Dialysis Times": "Dialysis Times", //G0234
+  "Blood Pressure Events": "Blood Pressure Events", //G0235
+  "Blood Pressure Rate": "Blood Pressure Rate", //G0236
+  "No Adjust Parameters": "No Adjust Parameters", //G0237
+  "Adjust Parameters": "Adjust Parameters", //G0238
+  "Execution Rate": "Execution Rate", //G0239
+  "Analyze Data Period": "Analyze Data Period", //G0240
+  "Intra Record": "Intra Record", //G0241
+  "No Information": "No Information", //G0242
+  "No Warning Message": "No Warning Message", //G0243
+  "Edit": "Edit", //G0244
+  "Personal Alarm Threshold": "Personal Alarm Threshold", //G0245
+  "Upper Bound": "Upper Bound", //G0246
+  "Lower Bound": "Lower Bound", //G0247
+  "Submit": "Submit", //G0248
+  "Alarm Threshold": "Alarm Threshold", //G0249
+  "System Threshold": "System Tres." //G0250
+}

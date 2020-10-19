@@ -1,0 +1,44 @@
+@import "app/css/variables.css";
+@import "app/css/mixins.css";
+@import "app/css/tables.css";
+@import "app/containers/Risk/Modules/Sbp/components/FormSBP/form-sbp.css";
+
+.simulate-container {
+  @mixin flex-box column, center, stretch;
+}
+
+.row {
+  line-height: 1rem;
+  height: 3.5rem;
+  .cell {
+    justify-content: flex-end;
+  }
+}
+
+.gray {
+  @mixin round-box 2rem;
+  box-shadow: none;
+  outline: none;
+  width: 105px;
+  border: 2px solid #aaa;
+  color: #333;
+  background-color: #ccc;
+
+  &:focus {
+    color: #333;
+    background-color: #eee;
+  }
+  &:hover {
+    color: #333;
+    background-color: #eee;
+  }
+  &:active {
+    color: #333;
+    background-color: #ccc;
+  }
+}
+
+.submit-row {
+  @mixin flex-box column, center, center;
+  padding-top: 1rem;
+}

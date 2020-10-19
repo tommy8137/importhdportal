@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+message ThresholdSetting {
+  required string status = 1;
+  required float max_threshold = 2;
+  required float min_threshold = 3;
+}

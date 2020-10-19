@@ -1,0 +1,77 @@
+@import "../Range/range.css";
+@import "app/css/mixins.css";
+@import "../../../variables.css";
+@import "app/css/variables.css";
+@import "../sbp.css";
+
+$variation-css: "../Range/range.css";
+
+.predict-legend-estimation {
+  composes: predict-legend from $variation-css;
+  &:before {
+    content: url('../images/i_r.png');
+  }
+}
+
+.simulate-legend-estimation {
+  composes: simulate-legend from $variation-css;
+  &:before {
+    content: url('../images/i_b.png');
+  }
+}
+
+.actual-legend-estimation {
+  composes: actual-legend from $variation-css;
+}
+
+.container {
+  flex: 1;
+  @mixin flex-box row, flex-start, stretch;
+}
+
+.column-left {
+  composes: column-left from $variation-css;
+}
+
+.column-right {
+  composes: column-right from $variation-css;
+}
+
+.legend-container {
+  composes: legend-container from $variation-css;
+}
+
+.legend {
+  composes: legend from $variation-css;
+  &:before {
+    content: '';
+  }
+}
+
+.chart-container {
+  composes: chart-container from $variation-css;
+}
+
+.simulator {
+  composes: simulator from $variation-css;
+}
+
+.time {
+  composes: time from $variation-css;
+}
+
+.predict_uf_comment {
+  composes: predict_uf_comment from $variation-css;
+}
+
+.tag {
+  composes: tag from $variation-css;
+}
+
+.section {
+  composes: section from $variation-css;
+}
+
+.section-form {
+  composes: section-form from $variation-css;
+}

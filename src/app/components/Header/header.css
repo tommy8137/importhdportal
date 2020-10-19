@@ -1,0 +1,253 @@
+@import "app/css/variables.css";
+@import "app/css/mixins.css";
+@import "app/css/components.css";
+
+.header-container {
+  top: 0px;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  min-width: $appWidth;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  @media (max-width: $appWidth) {
+    position: absolute;
+  }
+}
+
+.header {
+  width: 100%;
+  max-width: $appWidth;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  /* min-height: 100px; */
+  height: $header-height;
+  background: linear-gradient(to bottom, #dbdcdd 0%,#fcfaf9 50%,#f5f9fa 100%);
+  padding: 20px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  border-bottom-left-radius: $normal-border-radius;
+  border-bottom-right-radius: $normal-border-radius;
+  box-sizing: border-box;
+  box-shadow: 0 1px 1px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+}
+.logo {
+  /* margin-right: auto; */
+  margin-right: 1rem;
+}
+
+.description {
+  font-family: $fontFamily;
+  font-weight: bolder;
+  font-size: 1.2rem;
+}
+
+.nav-bar {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  justify-content: flex-end;
+  font-family: $fontFamily;
+  font-weight: bolder;
+  font-size: 1rem;
+  width: 120px;
+  text-align: center;
+  letter-spacing:0.0rem;
+  /*
+  text-indent: 0.3rem; */
+  padding-top: 10px;
+  padding-bottom: 5px;
+  cursor: pointer;
+  color: #3A3D3C;
+  background: 50% 10px no-repeat;
+  transition: background 0.3s;
+  user-select: none;
+
+  &:not(:nth-child(1)) {
+    box-shadow: 2px 0px 2px -2px #888;
+  }
+  &:nth-child(1) {
+    box-shadow: 2px 0px 2px -2px #888, -2px 0px 2px -2px #888;
+  }
+  &:not(.selected):hover {
+    color: #3A3D3C;
+  }
+
+
+  &.selected {
+    color: white;
+    background-color: #00b5ad;
+    box-shadow: 3px 0px 3px -2px #888, -3px 0px 3px -2px #888 !important;
+    &:hover {
+      color: white;
+    }
+  }
+
+  &[disabled] {
+    opacity: 0.3;
+    pointer-events: none;
+  }
+}
+
+.nav-text {
+  display: flex;
+  height: 3rem;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.patient {
+  composes: nav-item;
+  background-image: url("components/Header/images/patient_b.png");
+  &.selected {
+    background-image: url("components/Header/images/patient_w.png");
+  }
+}
+
+.dashboard {
+  composes: nav-item;
+  background-image: url("components/Header/images/dashbord_b.png");
+  &.selected {
+    background-image: url("components/Header/images/dashbord_w.png");
+  }
+}
+
+.report {
+  composes: nav-item;
+  background-image: url("components/Header/images/blood_report_b.png");
+  &.selected {
+    background-image: url("components/Header/images/blood_report_w.png");
+  }
+}
+
+.check {
+  composes: nav-item;
+  background-image: url("components/Header/images/blood_check_b.png");
+  &.selected {
+    background-image: url("components/Header/images/blood_check_w.png");
+  }
+}
+
+.risk {
+  composes: nav-item;
+  background-image: url("components/Header/images/sim_b.png");
+  &.selected {
+    background-image: url("components/Header/images/sim_w.png");
+  }
+}
+
+.effective {
+  composes: nav-item;
+  background-image: url("components/Header/images/report_b.png");
+  &.selected {
+    background-image: url("components/Header/images/report_w.png");
+  }
+}
+
+.right-section {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  flex: 1;
+  margin-left: 2rem;
+}
+
+.info {
+  width: 100%;
+  text-align: right;
+  line-height: 2rem;
+  font-size: 1rem;
+  font-family: $fontFamily;
+  /* font-weight: bold; */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  border-bottom: 1px solid $default-border-color;
+  margin-bottom: 0.3rem;
+}
+
+.widgets-bar {
+  @mixin flex-box row, flext-end, center;
+}
+
+.tool {
+  cursor: pointer;
+  align-self: center;
+  transition: transform 0.5s;
+  &:not(:last-child) {
+    margin-right: 1rem;
+  }
+}
+
+.widget {
+  composes: tool;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.profile {
+  composes: widget;
+}
+
+.admin-setting {
+  composes: widget;
+  content: url(components/Header/images/setting.png);
+  &:hover {
+    transform: rotate(45deg);
+  }
+}
+
+.logout {
+  composes: widget;
+  content: url(components/Header/images/logout.png);
+  &:hover {
+    /* transform: scale3d(1.2, 1, 1); */
+  }
+}
+
+.personal {
+  composes: widget;
+  content: url(components/Header/images/personal.png);
+}
+
+.locale {
+  width: 150px;
+  composes: tool dropdown;
+  :global {
+    .Select-control {
+      border: 1px solid $primary-green;
+    }
+    .Select-arrow,
+    .is-open.Select-arrow,
+    .Select-arrow-zone:hover > .Select-arrow {
+      border-color: $primary-green transparent transparent;
+    }
+
+    .Select-option {
+      color: $primary-green;
+    }
+  }
+
+  &:global(.has-value:not(.Select--multi)) {
+    > :global(.Select-control) {
+      > :global(.Select-value .Select-value-label){
+        color: $primary-green;
+      }
+    }
+  }
+  /* border: 1px solid black; */
+}

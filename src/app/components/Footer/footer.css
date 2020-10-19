@@ -1,0 +1,14 @@
+@import "app/css/variables.css";
+@import "app/css/mixins.css";
+
+.footer {
+  @mixin flex-box column, center, center;
+  color: color(darkgray b(+30%));
+  height: $footer-height;
+  border-top-left-radius: $normal-border-radius;
+  border-top-right-radius: $normal-border-radius;
+  /* background is copied from head.... lazy to refactor*/
+  background: linear-gradient(to bottom, #dbdcdd 0%,#fcfaf9 50%,#f5f9fa 100%);
+  padding-left: 2rem;
+  padding-right: 2rem;
+}

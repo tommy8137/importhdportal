@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+message ReqBPVariation {
+  double conductivity = 1;
+  double dia_temp_value = 2;
+  double uf = 3;
+  int32 blood_flow = 4;
+  double total_uf = 5;
+  int32 dia_flow = 6;
+  double ns = 7;
+  int32 age = 8;
+  int32 dm = 9;
+  double temperature = 10;
+  double dryweight = 11;
+  string gender = 12;
+  int32 sbp = 13;
+  string date = 14;
+  double deltadia_temp_value = 15;
+  double dialysis_year = 16;
+  double target_uf = 17;
+  double delta_uf = 18;
+  double delta_bloodflow = 19;
+}
+message ResBPVariation {
+  repeated Bounds res_bp_variation = 1;
+}
+message Bounds {
+  double UB_UB = 1;
+  double UB = 2;
+  double LB = 3;
+  double LB_LB= 4;
+}

@@ -1,0 +1,15 @@
+.triangle {
+  stroke: #fff;
+  fill: #fff;
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+}
+
+.triangle-blur {
+  opacity: 0.3;
+}
+
+.triangle-focus {
+  opacity: 1;
+}

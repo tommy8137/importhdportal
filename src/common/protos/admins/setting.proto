@@ -1,0 +1,5 @@
+syntax = "proto3";
+
+message Setting {
+  int32 timeout_minute = 1;
+}

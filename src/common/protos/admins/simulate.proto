@@ -1,0 +1,41 @@
+message ActualRow {
+  required int64 time = 1 ;
+  required int32 sbp = 2 ;
+  required double age = 3;
+  required double uf = 4;
+  required double conductivity = 5;
+  required double dia_temp_value = 6;
+  required double temperature = 7;
+  required int32 dm = 8;
+  required string gender = 9;
+  required double d_weight_ratio = 10;
+  required int32 bd_median = 11;
+
+}
+
+message Actual {
+  repeated ActualRow rows = 1;
+}
+
+message PredictRequest {
+  required int64 time = 1;
+  required double age = 2;
+  required double uf = 3;
+  required double conductivity = 4;
+  required double dia_temp_value = 5;
+  required double temperature = 6;
+  required int32 dm = 7;
+  required string gender = 8;
+  required double d_weight_ratio = 9;
+  required int32 bd_median = 10;
+}
+
+message PredictRow {
+  required double fit = 1;
+  required double lwr = 2;
+  required double upr = 3;
+}
+message PredictResponse {
+  required int64 time = 1;
+  repeated PredictRow rows = 2;
+}

@@ -1,0 +1,122 @@
+@import "app/css/variables.css";
+
+.table-wrapper {
+  width: $appWidth;
+  padding: 1px;
+  background: #eee;
+  border-radius: 9px;
+  overflow: hidden;
+}
+
+$ten-item-height: 400px;
+$twelve-item-height: 480px;
+$five-item-height: 200px;
+
+
+.table-body {
+  overflow-y: auto;
+  min-height: $five-item-height;
+  /*min-height: $ten-item-height;*/
+  /*max-height: $twelve-item-height;*/
+}
+
+.table-row {
+  display: flex;
+  height: 40px;
+  flex-direction: row;
+  padding: 0;
+  margin: 0;
+  font-size: 1.1em;
+  color: #585858;
+  padding-left: 30px;
+  align-items: center;
+
+  &:nth-child(even) {
+    background: #ddd;
+  }
+
+  &:nth-child(odd) {
+    background: #fff;
+  }
+
+  &:hover {
+    background: $table-hover-background;
+  }
+}
+
+.table-head {
+  position: relative;
+  composes: table-row;
+  background: $primary-green !important;
+  text-shadow: 1px 1px #555;
+  color: #fff;
+  align-items: center;
+  font-size: 1.2em;
+  border-radius: 8px 8px 0 0;
+}
+
+.table-title-text {
+  cursor: pointer;
+}
+
+.table-cell {
+  text-align: center;
+  &:nth-child(1) {
+    text-align: left;
+    width: 144px;
+  }
+
+  &:nth-child(2) {
+    text-align: left;
+    width: 162px;
+  }
+
+  &:nth-child(3) {
+    text-align: left;
+    width: 112px;
+  }
+
+  &:nth-child(4) {
+    width: 287px;
+  }
+
+  &:nth-child(5) {
+    width: 117px;
+  }
+
+  &:nth-child(6) {
+    width: 222px;
+  }
+
+  &:nth-child(7) {
+    text-align: left;
+    flex: 1;
+  }
+}
+
+.table-body-row {
+  composes: table-row;
+  cursor: pointer;
+
+  &:last-child {
+    border-radius: 0 0 8px 8px;
+  }
+}
+
+.triangle {
+  stroke: #fff;
+  fill: #fff;
+  cursor: pointer;
+
+  &-blur {
+    opacity: 0.3;
+  }
+
+  &-focus {
+    opacity: 1;
+  }
+}
+
+.redtext {
+  color: #be1630;
+}

@@ -1,0 +1,38 @@
+@import "app/css/mixins.css";
+@import "app/css/variables.css";
+
+.header-container {
+  min-height: $header-height;
+  border-bottom-left-radius: $normal-border-radius;
+  border-bottom-right-radius: $normal-border-radius;
+  background: linear-gradient(to bottom, #dbdcdd 0%,#fcfaf9 50%,#f5f9fa 100%);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-width: 600px;
+  @media (max-width: $appWidth) {
+    width: 100vw;
+  }
+  @media (min-width: $appWidth) {
+    width: $appWidth;
+  }
+}
+
+.header {
+  flex: 1;
+  @mixin flex-box row, center, center;
+  position: relative;
+  /* justify-content: center; */
+}
+
+.logo {
+
+}
+
+.current-time {
+  position: absolute;
+  right: 1rem;
+  @mixin flex-box column, flex-start, flex-end;
+}
+

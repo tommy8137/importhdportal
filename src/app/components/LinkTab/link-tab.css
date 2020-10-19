@@ -1,0 +1,42 @@
+@import "app/css/variables.css";
+@import "app/css/mixins.css";
+@import "app/css/components.css";
+
+.tab {
+  composes: box-with-line;
+  height: 3.2rem;
+  color: white;
+  &:last-child:after {
+    width: 0rem;
+    content: '';
+    border: none;
+  }
+}
+
+.inner {
+  font-size: 1.3rem;
+  position: relative;
+  width: $tab-width;
+  height: 100%;
+}
+.base {
+  width: $tab-width;
+  height: 100%;
+  @mixin flex-box row, center, center;
+  composes: circle-box;
+  height: 3.2rem;
+  border-radius: 1.6rem;
+  position: absolute;
+}
+
+.tab-background {
+  composes: base;
+  z-index: 0;
+  background-color: $primary-green;
+}
+
+.tab-foreground {
+  cursor: pointer;
+  composes: base;
+  z-index: 2;
+}

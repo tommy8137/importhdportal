@@ -1,0 +1,66 @@
+@import "app/css/mixins.css";
+@import "app/css/variables.css";
+@import "app/css/components.css";
+
+.container {
+  @mixin flex-box column, flex-start, stretch;
+  width: 500px;
+  min-height: 536px;
+  flex: 1;
+  padding-top: 1rem;
+}
+
+.main-content {
+  @mixin flex-box row, center, stretch;
+  margin-top: 1rem;
+  height: 400px;
+  background-color: $background-primary-color;
+  border-radius: $normal-border-radius;
+  overflow: visible;
+}
+
+.title {
+  font-size: 1.2rem;
+  margin-right: 0.5rem;
+}
+
+.text-period {
+  text-align: left;
+  font-size: 1.2rem;
+  width: 60px;
+}
+
+.modal {
+  &-block {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &-top-block {
+    height: 50px;
+    width: 100%;
+    @mixin flex-box row, flex-start, center;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-bottom: 2px solid #aaa;
+  }
+
+  &-mid-block {
+    margin: 0px auto;
+  }
+
+  &-mid2-block {
+    @mixin flex-box columns, flex-start, center;
+    margin-top: -200px;
+    margin-left: 20px;
+    width: 100%;
+  }
+  &-buttom-block {
+    margin: 0px auto;
+  }
+}
+
+.select-div{
+  margin-left: 10px;
+}

@@ -1,0 +1,6 @@
+{
+  "name": "PredictLine",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./PredictLine.js"
+}

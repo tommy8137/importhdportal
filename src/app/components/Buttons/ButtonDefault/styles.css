@@ -1,0 +1,62 @@
+@import "app/css/variables.css";
+@import "app/css/mixins.css";
+
+.default-btn {
+  @mixin round-box 2.4rem;
+  width: 150px;
+  box-shadow: none;
+  border: none;
+  outline: none;
+}
+
+.primary {
+  composes: default-btn;
+  color: #fff;
+  background-color: $primary-green;
+
+  &:focus {
+    color: #fff;
+    background-color: $primary-green--hover;
+  }
+
+  &:hover {
+    color: #fff;
+    background-color: $primary-green--hover;
+  }
+
+  &:active {
+    color: #fff;
+    background-color: $primary-green--active;
+  }
+
+  &:disabled {
+    background-color: #aaa;
+  }
+}
+
+.white {
+  composes: default-btn;
+  color: $lightgray-color;
+  background-color: white;
+  border: 1px solid $lightgray-color;
+
+  &:focus {
+    /* color: $lightgray-color;
+    background-color: color(white b(+ 20)); */
+  }
+
+  &:hover:not(:disabled):not(:active) {
+    color: $lightgray-color;
+    background-color: color(white b(+ 20));
+  }
+
+  &:active {
+    color: #fff;
+    background-color: color(white b(+ 60));
+  }
+
+  &:disabled {
+    color: color($lightgray-color a(-50%));
+    /* background-color: color(white b(+ 80)); */
+  }
+}

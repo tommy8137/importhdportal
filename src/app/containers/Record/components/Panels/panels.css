@@ -1,0 +1,103 @@
+@import "app/css/variables.css";
+@import "app/css/mixins.css";
+
+.container {
+  @mixin flex-box column, flex-start, stretch;
+  overflow: hidden;
+  border-top-right-radius: $normal-border-radius;
+  border-bottom-right-radius: $normal-border-radius;
+  /* padding: 0.8rem; */
+  flex: 1;
+  background: white;
+}
+
+.panels-switchor {
+  /*@mixin flex-box row, center, center;*/
+  /* if only display one button, add left padding , and flex-start*/
+  @mixin flex-box row, flex-start, center;
+  padding-left: 1rem;
+
+  min-height: 50px;
+  border-bottom: 1px solid color($lightgray-color a(50%));
+}
+
+.button {
+  line-height: 1rem;
+  @mixin round-box 2.2rem;
+  background: $primary-green;
+  border-color: transparent;
+  color: white;
+  min-width: 100px;
+  transition: 0.6s background-color;
+  &:not(:last-child) {
+    margin-right: 1rem;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    box-shadow: 0 0 1px 1px color(blue w(+70));
+  }
+
+  &:active {
+    color: gray;
+    border: 2px solid color(gray b(+20%));
+  }
+}
+
+.button-selected {
+  composes: button;
+  background: orange;
+}
+
+.content {
+  flex: 1;
+  position: relative;
+}
+
+.panels {
+  @mixin flex-box row, flex-start, stretch;
+  position: absolute;
+  height: 100%;
+  width: 300%;
+  transition: left 0.5s;
+  left: 0%;
+}
+
+.go-to-intra {
+  left: 0%;
+  composes: panels;
+}
+
+.go-to-pre {
+  left: -100%;
+  composes: panels;
+}
+
+.go-to-post {
+  left: -200%;
+  composes: panels;
+}
+
+.panel {
+  padding: 1rem;
+  overflow-y: auto;
+  @mixin flex-box column, flex-start, stretch;
+}
+
+.panel-intra {
+  composes: panel;
+  flex: 1;
+}
+
+.panel-pre {
+  composes: panel;
+  flex: 1;
+}
+
+.panel-post {
+  composes: panel;
+  flex: 1;
+}

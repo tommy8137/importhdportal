@@ -1,0 +1,7 @@
+.node-circle {
+  r: 6px;
+  cursor: pointer;
+  &:hover {
+    r: 10px;
+  }
+}

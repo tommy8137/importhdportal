@@ -1,0 +1,51 @@
+@import "app/css/variables.css";
+@import "app/css/mixins.css";
+@import "app/css/components.css";
+
+.container {
+  padding: 1rem;
+  padding-top: 0rem;
+  margin-top: 2rem;
+  border-radius: $normal-border-radius;
+  width: calc( 2 * 300px + 2rem);
+  min-height: 500px;
+  background: color(white a(80%));
+}
+
+.header {
+  @mixin flex-box row, stretch, center;
+  height: 3rem;
+  border-bottom: 1px solid $default-border-color;
+}
+
+.content {
+  margin-top: 2rem;
+  @mixin flex-box column, flex-start, flex-start;
+}
+
+.row {
+  font-size: 1.5rem;
+  min-height: 4rem;
+  @mixin flex-box row, flex-start, center;
+}
+
+.col {
+  height: 2.8rem;
+}
+
+.label {
+  composes: col;
+  width: 200px;
+  @mixin flex-box row, flex-end, center;
+  margin-right: 0.5rem;
+}
+
+.value {
+  @mixin flex-box row, center, center;
+  composes: circle-box col;
+  width: 300px;
+  border: 1px $default-border-color solid;
+  background: white;
+}
+
+

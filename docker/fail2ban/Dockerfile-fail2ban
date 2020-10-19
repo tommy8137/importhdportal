@@ -1,0 +1,11 @@
+FROM alpine:3.4
+
+RUN apk add --update fail2ban && \
+  mkdir /var/run/fail2ban && \
+  rm /etc/fail2ban/jail.d/alpine-ssh.conf
+
+ADD filter.d/apache-401.conf /etc/fail2ban/filter.d/apache-401.conf
+ADD jail.d/apache-401.conf /etc/fail2ban/jail.d/apache-401.conf
+ADD action.d/docker-iptables-multiport.conf /etc/fail2ban/action.d/docker-iptables-multiport.conf
+
+CMD fail2ban-client -x start && tail -f /var/log/fail2ban.log

@@ -1,0 +1,89 @@
+@import "app/css/variables.css";
+@import "app/css/mixins.css";
+@import "app/css/components.css";
+
+.container {
+  @mixin flex-box column, flex-start, stretch;
+  /* min-height: $default-content-height;
+  height: $default-max-content-height; */
+  min-height: $default-max-content-height;
+  overflow: hidden;
+  align-self: stretch;
+}
+
+.main-row {
+  @mixin flex-box row, flex-start, stretch;
+  min-height: $default-content-height;
+  flex: 1;
+  border-radius: $normal-border-radius;
+  background: $background-primary-color;
+  /* overflow: hidden; */
+}
+
+.status-bar {
+  @mixin flex-box row, flex-start, stretch;
+  height: 4rem;
+  border-radius: $normal-border-radius;
+  background: $background-primary-color;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-bottom: 20px;
+}
+
+.status-item {
+  @mixin flex-box column, center, flex-start;
+  flex: 1;
+}
+
+.status-label {
+
+}
+
+.status-format {
+
+}
+
+.status-value {
+  color: color(cyan l(-10%));
+}
+
+.row {
+  @mixin flex-box row, flex-start, center;
+  flex: 1;
+}
+
+.col {
+  @mixin flex-box column, flex-start, stretch;
+}
+
+
+.col-2 {
+  composes: col;
+  /* @mixin flex-box row, flex-start, stretch; */
+  /* flex: 1; */
+  width: 550px;
+  /* height: 100%; */
+  border-right: 1px solid $default-border-color;
+}
+
+.col-3 {
+  composes: col;
+  padding: 0.8rem;
+  flex: 1;
+  background: white;
+}
+
+.Nav {
+  display: flex;
+  flex-direction: row;
+  /*justify-content:center;*/
+  align-items: center;
+}
+
+.selectedDate {
+  margin: 0 auto;
+  margin-right: -5px;
+  font-size: 16px;
+}

@@ -1,0 +1,40 @@
+@import "app/css/variables.css";
+@import "app/css/mixins.css";
+@import "./variables.css";
+@import "app/css/tables.css";
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  min-height: $default-max-content-height;
+  /* height: $default-max-content-height; */
+  /* min-height: calc($default-content-height + 100px); */
+}
+
+.filter-bar {
+  @mixin flex-box row, flex-start, center;
+}
+
+.main {
+  position: relative;
+  @mixin flex-box column, flex-start, stretch;
+  width: 100%;
+  /* height: $default-max-content-height; */
+  /* max-width: $appWidth; */
+  margin-left: auto;
+  margin-right: auto;
+  flex: 1;
+  flex-wrap: wrap;
+  /* background-color: rgba(219, 220, 221, 0.7); */
+  background-color: $background-primary-color;
+  overflow: hidden;
+  border-radius: $normal-border-radius;
+  @media (max-width: 992px) {
+    justify-content: flex-start;
+  }
+}
+
+
+

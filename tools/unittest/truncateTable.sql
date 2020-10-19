@@ -1,0 +1,8 @@
+TRUNCATE TABLE tyhd_pat_hd_base
+TRUNCATE TABLE tyhd_appointment
+TRUNCATE TABLE tyhd_lab_data
+TRUNCATE TABLE tyhd_pat_hd_memo
+TRUNCATE TABLE tyhd_pat_hd_master
+TRUNCATE TABLE tyhd_pat_hd_qa
+TRUNCATE TABLE tyhd_cis_data
+TRUNCATE TABLE tyhd_pat_hd_rec

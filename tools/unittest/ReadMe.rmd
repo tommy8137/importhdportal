@@ -1,0 +1,22 @@
+1. 為何不寫成npm run xxx 因為要小心使用 ~ 不愛,可自己用 sql tools 去 truncateTable or insertFile也可以
+2. 寫testcase ->
+            change pat_no, hdrec_id in backcase
+            npm run back-unit-db
+            sh tools/unittest/insertFile.sh
+            npm run test
+3. 測試腳本是否可work ->
+            npm run back-unit-db
+            sh tools/unittest/truncateTable.sh
+            sh tools/unittest/insertFile.sh
+            npm run test
+
+Example for New table case (other table already have test rows):
+for now add a new table "tyhd_pat_hd_rec"
+1. comment out the yield optimalBackup..... in backcase.js
+2. add "yield optimalBackup('tyhd_pat_hd_rec', 'hdrec_id',
+   hdrec_id)" in backcase.js
+3. comment out all "add sqlcmd ....." and
+   add "sqlcmd -S 192.168.1.159 -U wi -P wistron -d unittest -i tyhd_pat_hd_rec.sql in insertFile.js".
+4. add "TRUNCATE TABLE tyhd_pat_hd_rec" in truncateTalbe.sql
+5. npm run back-unit-db && sh tools/unittest/insertFile.sh
+6. recovery "all comment out" of above file.

@@ -1,0 +1,42 @@
+.node-circle {
+  r: 9px;
+  cursor: pointer;
+  &:hover {
+    r: 14px;
+  }
+}
+
+.node-circle-critical {
+  cursor: pointer;
+  &:hover circle:first-child {
+    r: 14px;
+  }
+
+  &:hover circle {
+    r: 12px;
+  }
+}
+
+.abnormal {
+  composes: node-circle;
+  fill: #bb0625;
+  stroke: #e0362b;
+}
+
+.critical {
+  composes: node-circle;
+  fill: #bb0625;
+  stroke: #e0362b;
+}
+
+.normal {
+  composes: node-circle;
+  fill: #269338;
+  stroke: #91c710;
+}
+
+.no-data {
+  composes: node-circle;
+  fill: #aaa;
+  stroke: #ccc;
+}

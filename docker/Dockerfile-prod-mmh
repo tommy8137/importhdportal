@@ -1,0 +1,24 @@
+FROM node:6.9.2-slim
+
+# Create app directory
+RUN mkdir -p /web-portal
+WORKDIR /web-portal
+
+RUN apt-get update && \
+  apt-get install -y libzmq3 libaio1 --no-install-recommends && \
+  rm -rf /var/lib/apt/lists/*
+
+# Bundle app source
+ADD build /web-portal/build
+ADD keys /web-portal/keys
+ADD node_modules /web-portal/node_modules
+ADD config.js /web-portal/config.js
+
+# Set up oracle instant client
+RUN mkdir -p /opt/oracle
+ADD tools/oracle/instantclient /opt/oracle/instantclient
+ENV LD_LIBRARY_PATH=/opt/oracle/instantclient
+
+VOLUME [ "/web-portal/logs" ]
+
+ENTRYPOINT [ "node" ]

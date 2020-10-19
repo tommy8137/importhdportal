@@ -1,0 +1,44 @@
+@import "app/css/mixins.css";
+
+.container {
+  position: relative;
+  width: 100%;
+  flex: 1;
+  min-height: 650px;
+}
+
+.animator {
+  @mixin flex-box row, center, flex-start;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+}
+
+.enter {
+  opacity: 0.01;
+  transition: opacity 0.5s ease;
+}
+
+.enterActive {
+  opacity: 1;
+}
+
+.leave {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.leaveActive {
+  opacity: 0.01;
+}
+
+.appear {
+  opacity: 0.01;
+  transition: opacity 0.5s ease;
+}
+
+.appearActive {
+  opacity: 1;
+}

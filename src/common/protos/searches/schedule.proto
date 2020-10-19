@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+message Schedule {
+  int32 total_nums = 1;
+  repeated SchedulePatients schedule_patients = 2;
+}
+message SchedulePatients {
+  string date = 1;
+  string name = 2;
+  string gender = 3;
+  string patient_id = 4;
+  string bed_no = 5;
+  int32 schedule = 6;
+  string progress = 7;
+  string r_id = 8;
+}

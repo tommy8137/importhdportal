@@ -1,0 +1,116 @@
+@import "app/css/variables.css";
+@import "app/css/mixins.css";
+@import "../../overview.css";
+
+$table-grey-bg-color: #ddd;
+$table-border-color: #eee;
+$table-row-height: 40px;
+.table-wrapper {
+
+  border: 1px solid $table-border-color;
+  background: $table-grey-bg-color;
+  overflow: hidden;
+  border-radius: 0 9px 9px 0;
+  /*min-height: 540px;*/
+  height: 100%;
+}
+
+.table-body {
+  @mixin flex-box column, flex-start, stretch;
+  background: $table-grey-bg-color;
+  min-height: calc($overview-patient-min-height - 2 * $table-row-height);
+  height: calc($overview-patient-height - 2 * $table-row-height);
+  overflow-y: auto;
+}
+
+.table-row {
+  @mixin flex-box row, center, left;
+  min-height: $table-row-height;
+  padding: 0;
+  margin: 0;
+  font-size: 1.1em;
+  color: #585858;
+  align-items: center;
+  padding-left: 5px;
+  &:nth-child(even) {
+    background: #ddd;
+  }
+
+  &:nth-child(odd) {
+    background: #fff;
+  }
+
+  &:hover {
+    background: $table-hover-background;
+  }
+}
+
+.table-body-row {
+  composes: table-row;
+  cursor: pointer;
+}
+
+.table-sub-head {
+  position: relative;
+  composes: table-row;
+  background: #ddd !important;
+  word-wrap: break-word;
+}
+
+.table-head {
+  composes: table-row;
+  background: $primary-green !important;
+  text-shadow: 1px 1px #555;
+  color: #fff;
+  justify-content: center;
+  font-size: 1.1rem;
+  border-radius: 0 8px 0 0;
+  padding-left: 0;
+}
+
+.table-title-text {
+  cursor: pointer;
+}
+
+.table-cell {
+  text-align: center;
+  &:nth-child(1) {
+    width: 30px;
+  }
+
+  &:nth-child(2) {
+    width: 70px;
+  }
+
+  &:nth-child(3) {
+    width: 85px;
+  }
+
+  &:nth-child(4) {
+    width: 61px;
+  }
+
+  &:nth-child(5) {
+    width: 63px;
+  }
+
+  &:nth-child(6) {
+    width: 70px;
+    word-wrap: break-word;
+  }
+
+  &:nth-child(7) {
+    flex: 1;
+    word-wrap: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    .table-title-text {
+      /*width: 71%;*/
+      display: inline-block;
+    }
+  }
+}
+
+.redtext {
+  color: #be1630;
+}

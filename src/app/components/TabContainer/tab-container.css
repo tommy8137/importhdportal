@@ -1,0 +1,28 @@
+@import "app/css/mixins.css"
+@import "app/css/variables.css";
+@import "app/css/components.css";
+
+.container {
+  @mixin flex-box row, center, center;
+  min-height: 1rem;
+  width: 100%;
+  position: relative;
+}
+
+.current-box {
+  composes: circle-box;
+  position: absolute;
+  width: $tab-width;
+  height: 3.2rem;
+  border-radius: 1.6rem;
+  background-color: orange;
+  z-index: 1;
+  top: 0px;
+  /* border-color: color(white a(0%));
+  position: absolute;
+  top: 0px;
+  width: $tab-width;
+  height: 3rem;
+  background: pink;
+  z-index: -1; */
+}

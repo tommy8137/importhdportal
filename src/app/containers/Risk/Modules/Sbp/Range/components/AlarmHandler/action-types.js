@@ -1,0 +1,7 @@
+import constants from 'flux-constants'
+
+export default constants([
+  'RISK_ALARM_PHARSE_SET_KEEP_OBSERVE_REQUEST',
+  'RISK_ALARM_PHARSE_SET_KEEP_OBSERVE_SUCCESS',
+  'RISK_ALARM_PHARSE_SET_KEEP_OBSERVE_FAILED',
+])

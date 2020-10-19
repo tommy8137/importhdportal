@@ -1,0 +1,146 @@
+@import "./variables.css";
+@import "./mixins.css";
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.dropdown {
+  cursor: pointer;
+  text-align: center;
+  width: 150px;
+
+  :global(.Select-control) {
+    border-radius: 1.5rem;
+    border-bottom-left-radius: 1.5rem !important;
+    border-bottom-right-radius: 1.5rem !important;
+    :global(.Select-input) {
+      /*height: 2.25rem;*/
+    }
+    :global(.Select-value) {
+      /*line-height: 2.25rem;*/
+      padding-left: 1rem;
+    }
+    :global(.Select-value-label) {
+      display: block;
+      /*line-height: 2.25rem;*/
+    }
+  }
+
+  :global(.Select-menu-outer) {
+    top: calc(100% + 3px);
+    border-radius: 10px;
+    background-color: white;
+    > div:nth-child(1) {
+      > div {
+        color: #333;
+        background-color: white;
+      }
+      /* high light previous selected item */
+      :global(.is-selected) {
+        color: #fff;
+        background-color: $primary-green;
+      }
+      /* hover effect */
+      > div:hover {
+        color: #fff;
+        background-color: $primary-green--hover;
+      }
+      > .selected {
+        color: #fff;
+        background-color: $primary-green--active;
+      }
+    }
+  }
+
+  :global(.Select-option) {
+
+    &:first-child {
+      border-radius: $normal-border-radius $normal-border-radius 0 0;
+    }
+
+    &:last-child {
+      border-radius: 0 0 $normal-border-radius $normal-border-radius;
+    }
+
+    &:only-child {
+      border-radius: $normal-border-radius $normal-border-radius $normal-border-radius $normal-border-radius;
+    }
+
+    &:global(.is-focused) {
+
+    }
+  }
+}
+
+/* fixed the origin style have different shadow color */
+:global(.is-focused:not(.is-open)) > :global(.Select-control) {
+  border-color: $default-border-color;
+  box-shadow: none;
+}
+
+.circle-box {
+  width: 100%;
+  outline: 0;
+  border: none;
+  height: 3rem;
+  border-radius: 1.5rem;
+  min-width: 100px;
+  border: none;
+  border: 5px solid rgba(255, 255, 255, .1);
+  text-align: center;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  background-clip: padding-box;
+}
+
+.box-with-line {
+  @mixin flex-box;
+  overflow: hidden;
+  &:after {
+    display: flex;
+    content: '';
+    border-top: $border-thin solid color($whiteBorderColor a(20%));
+    height: 0px;
+    width: 2em;
+  }
+}
+
+.default-btn {
+  @mixin round-box 2.4rem;
+  width: 150px;
+  box-shadow: none;
+  border: none;
+  outline: none;
+}
+
+.primary-green-button {
+  composes: default-btn;
+  color: #fff;
+  background-color: $primary-green;
+
+  &:focus {
+    color: #fff;
+    background-color: $primary-green--hover;
+  }
+
+  &:hover {
+    color: #fff;
+    background-color: $primary-green--hover;
+  }
+
+  &:active {
+    color: #fff;
+    background-color: $primary-green--active;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    background-color: #aaa;
+  }
+}

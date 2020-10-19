@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+message Patient {
+  string name = 1;
+  string patient_id = 2;
+  string bed_no = 3;
+  int32 age = 4;
+  string gender = 5;
+  repeated Disease diseases = 6;
+}
+message RiskSummary {
+  repeated Prediction risk_summary = 1;
+}
+message Prediction {
+  string category = 1;
+  string c_id = 2;
+  repeated Module module = 3;
+}
+message Module {
+  string m_id = 1;
+  string m_name = 2;
+  string risk_time = 3;
+  string type = 4;
+  int32 alarm_status = 5;
+}
+message Disease {
+  string d_id = 1;
+  string d_name = 2;
+}

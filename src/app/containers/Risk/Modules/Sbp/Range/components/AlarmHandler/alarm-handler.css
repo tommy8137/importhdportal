@@ -1,0 +1,119 @@
+@import "app/css/components.css";
+@import "app/css/mixins.css";
+@import "app/css/variables.css";
+
+@define-mixin alarm-color-text $color: $primary-green {
+  @mixin flex-box column, center, flex-start;
+  color: $color;
+  .title {
+    @mixin flex-box row, center, center;
+    font-weight: 900;
+    img {
+      margin-left: 0.5rem;
+    }
+  }
+
+  .status {
+
+  }
+}
+
+.container {
+  @mixin flex-box row, space-between, center;
+  margin-left: 2rem;
+  width: 580px;
+  button {
+    margin-right: 1rem;
+  }
+}
+
+.alarm-status {
+  @mixin flex-box row, center, center;
+  margin-right: 3rem;
+}
+
+.icon {
+  margin-right: 1rem;
+}
+
+.title-and-status {
+  width: 14rem;
+}
+.text-red {
+  @mixin alarm-color-text #a92d2d;
+  composes: title-and-status;
+}
+
+.text-orange {
+  @mixin alarm-color-text #db5e2e;
+  composes: title-and-status;
+}
+
+.text-green {
+  @mixin alarm-color-text $primary-green;
+  composes: title-and-status;
+}
+
+.status-container {
+
+}
+
+.process-info {
+
+}
+
+.buttons {
+  @mixin flex-box row, space-between, center;
+}
+
+.blur-layer {
+  pointer-events: none; /* make the hover event can pass to the lower layer */
+  position: absolute;
+  opacity: 0.5;
+  background: white;
+  z-index: 10;
+  width: 260px;
+  height: 52px;
+}
+
+.processIcon {
+  cursor: help;
+}
+.processContent{
+  width: 530px;
+  margin-top: -1.5rem;
+  margin-left: 1rem;
+  outline: 3px white;
+  border-radius: 8px;
+  padding: 1rem;
+  position: absolute;
+  z-index: 11;
+  background: $primary-green;
+  color: white;
+  font-weight: 300;
+  border: 2px solid white;
+  box-shadow: 3px 1px 3px -2px #888, -3px 1px 3px -2px #888;
+  &:before {
+    position: absolute;
+    left: -0.6rem;
+    top: 13px;
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-right: 10px solid $primary-green;
+  }
+}
+
+.pharse-title,
+.process-title {
+  font-weight: 900;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.pharse-detail,
+.process-detail {
+  padding-bottom: 5px;
+}

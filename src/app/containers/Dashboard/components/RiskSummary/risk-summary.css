@@ -1,0 +1,133 @@
+@import "app/css/variables.css";
+@import "app/css/mixins.css";
+
+$col-number-width: 3rem; /* column of number */
+$col-topic-width: 6rem;
+
+.container {
+  position: relative;
+  width: 100%;
+  flex: 1;
+  overflow: hidden;
+  @mixin flex-box column, flex-start, stretch;
+}
+
+.title {
+  background: $primary-green;
+  color: white;
+  height: 3rem;
+  font-size: 1.2rem;
+  font-weight: bolder;
+  @mixin flex-box row, center, center;
+}
+
+.row {
+  @mixin flex-box row, stretch, stretch;
+}
+
+.status-icon {
+  padding-left: 10px;
+}
+
+.header-row {
+  @mixin flex-box row, stretch, flex-start;
+}
+
+.header {
+  background: lightgray;
+  @mixin flex-box row;
+  height: 3rem;
+  border-bottom: 1px solid $default-border-color;
+}
+
+.header-topic {
+  composes: header;
+  width: calc($col-number-width + $col-topic-width);
+}
+
+.module-base {
+  flex: 1;
+}
+
+.header-module {
+  composes: header module-base;
+}
+
+.body {
+  position: absolute;
+  left: 0px;
+  right: 1px;
+  top: 6rem;
+  bottom: 0px;
+  flex: 1;
+  overflow: auto;
+  @mixin scroll-bar-1;
+}
+
+.item {
+  @mixin flex-box column, center, center;
+  border-bottom: 1px solid $default-border-color;
+  &:not(:last-child) {
+    border-right: 1px solid $default-border-color;
+  }
+}
+
+.item-number {
+  composes: item;
+  width: $col-number-width;
+}
+
+.item-topic {
+  composes: item;
+  width: $col-topic-width;
+}
+
+.item-modules {
+  composes: item;
+  flex: 1;
+}
+/*
+
+
+ */
+.module {
+  @mixin flex-box row, center, center;
+  cursor: pointer;
+  align-self: stretch;
+  min-height: 2.5rem;
+  &:nth-child(even) {
+    /*background: linear-gradient(to right, #d6d6d6 0%,#ffffff 50%);*/
+    &:hover {
+      background: pink;
+      /* background: linear-gradient(to right, pink 0%,#ffffff 50%); */
+    }
+  }
+  &:nth-child(odd) {
+    /*background: linear-gradient(to left, #d6d6d6 0%,#ffffff 50%);*/
+    &:hover {
+      background: pink;
+      /* background: linear-gradient(to left, pink 0%,#ffffff 50%); */
+    }
+  }
+  &:link, &:active, &:visited
+  {
+    color: #50b4aa;
+  }
+  &:hover {
+    /*text-decoration: underline;*/
+  }
+}
+
+.riskList {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.riskTime {
+  color: red;
+}
+
+.blackColon {
+  color: black;
+}

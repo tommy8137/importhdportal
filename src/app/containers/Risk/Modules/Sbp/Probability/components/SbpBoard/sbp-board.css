@@ -1,0 +1,27 @@
+@import "app/css/variables.css";
+@import "app/css/mixins.css";
+
+.container {
+  @mixin flex-box column, center, center;
+  align-self: center;
+  flex: 1;
+}
+
+.board {
+  /* flex: 1; */
+  @mixin flex-box row;
+  width: 680px;
+  height: 170px;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+  /* @mixin flex-box row, center, center; */
+}
+
+.title {
+  font-size: 1.3rem;
+  min-height: 1.3rem;
+}
+
+.condition {
+  color: color(cyan l(-10%));
+}

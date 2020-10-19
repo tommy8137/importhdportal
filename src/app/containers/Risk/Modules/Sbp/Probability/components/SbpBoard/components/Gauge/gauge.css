@@ -1,0 +1,48 @@
+@import "app/css/variables.css";
+@import "app/css/mixins.css";
+
+$gray: color(#888 a(-30%));
+
+.container {
+  flex: 1;
+  align-self: stretch;
+  padding: 10px;
+}
+
+.outline {
+  stroke: $gray;
+}
+
+.bg-path {
+  fill: $gray;
+}
+
+.time {
+  /* y: 70px; */
+  stroke: none;
+  fill: gray;
+  font-size: 25px;
+}
+
+.splitter {
+  stroke: none;
+  fill: $gray;
+}
+
+.text {
+  font-size: 25px;
+}
+
+.predict-prob {
+  composes: text;
+  fill: color(gray l(+10%));
+}
+
+.simulate-prob {
+  composes: text;
+  fill: black;
+}
+
+.probability {
+  font-size: 40px;
+}

@@ -1,0 +1,97 @@
+@import "app/css/variables.css";
+@import "app/css/mixins.css";
+
+html, body {
+  font-size: 15px;
+  line-height: 1rem;
+  margin: 0px;
+  display: block;
+  @media (max-width: ($appWidth - 1px)) {
+    overflow-x: auto !important;
+  }
+}
+
+body {
+  background: url("/static/ECK.jpg") fixed;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+
+.root {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  /* width: 100vw; take off 0525*/
+  /* @mixin flex-box; */
+  height: 100vh;
+}
+
+.root-loading {
+  composes: root;
+  &:after {
+    content: '';
+    position: fixed;
+    z-index: 1001;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background: rgba(255, 255, 255, 0.5);
+  }
+  >:global(.ui.loader) {
+    &:before{
+      border: .2em solid rgba(0,0,0,0.7);;
+    }
+  }
+}
+
+.loader {
+  position: fixed;
+  z-index: 1002;
+  top: calc(50% - 2em);
+  left: calc(50% - 2em);
+}
+.container {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 50px;
+  height: 100vh;
+}
+
+.enter {
+  opacity: 0.01;
+  transition: opacity 0.3s ease;
+}
+
+.enterActive {
+  opacity: 1;
+}
+
+.leave {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.leaveActive {
+  opacity: 0.01;
+}
+
+.appear {
+  opacity: 0.01;
+  transition: opacity 0.3s ease;
+}
+
+.appearActive {
+  opacity: 1;
+}
+
+.count {
+  font-size: 1.2rem;
+  color: #777;
+  margin-left: 0.5rem;
+}

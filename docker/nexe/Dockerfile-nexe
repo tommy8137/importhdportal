@@ -1,0 +1,28 @@
+FROM node:6.9.2-alpine
+
+RUN mkdir -p /nexe
+
+RUN apk --update add \
+      git \
+      binutils-gold \
+      curl \
+      g++ \
+      gcc \
+      gnupg \
+      libgcc \
+      linux-headers \
+      make \
+      python
+
+ADD tools/yarn /opt/yarn
+ADD nexe/tmp /nexe/tmp
+
+RUN ln -s /opt/yarn/bin/yarn /usr/local/bin/yarn
+
+RUN yarn global add nexe@1.1.2
+ADD nexe_utf8_workaround/bundle.js /usr/local/share/.config/yarn/global/node_modules/nexe/lib/
+
+RUN mkdir -p /project
+WORKDIR /project
+
+ENTRYPOINT ["nexe"]

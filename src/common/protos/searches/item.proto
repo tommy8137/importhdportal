@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+message ItemsList {
+  int32 total_nums = 1;
+  repeated Item results = 2;
+}
+message Item {
+  string tr_id = 1;
+  string date = 2;
+  double value = 3;
+}

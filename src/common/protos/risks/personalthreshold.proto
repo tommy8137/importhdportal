@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+message PersonalThreshold {
+  required string status = 1;
+  required float max_threshold = 2;
+  required float min_threshold = 3;
+  required float personal_threshold = 4;
+  required string editable = 5;
+}
+
+message SetPersonalThreshold {
+  required string r_id = 1;
+  required float setting_threshold = 2;
+}

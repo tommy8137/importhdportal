@@ -1,0 +1,41 @@
+.xAxis path {
+  fill: none;
+  stroke: #666;
+  stroke-width: 1px;
+}
+
+.xAxis text :not(.currentTime) {
+  font-size: 16px;
+  fill: #aaa;
+}
+
+.xAxis line {
+  fill: none;
+  stroke-width: 1;
+  stroke-dasharray: 3, 3;
+  stroke: #999;
+}
+
+.xAxis text:hover {
+  fill: #fff;
+  cursor: pointer;
+}
+
+.currentTime text {
+  font-weight: 1800;
+  fill: #fff;
+}
+
+.currentTime line {
+  fill: none;
+  stroke-width: 3;
+  stroke: #cd9c3d;
+  opacity: 0.5;
+}
+
+.xAxis .currentLine {
+  fill: none;
+  stroke-width: 3;
+  stroke: #cd3c61;
+  opacity: 1;
+}

@@ -1,0 +1,67 @@
+@import "app/css/variables.css";
+@import "app/css/mixins.css";
+
+.base {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  @media (max-width: $appWidth) {
+    overflow: auto;
+  }
+}
+
+.transition-container {
+  position: absolute;
+  top: $header-height;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  * {
+    /* custom scrollbar */
+    :global(::-webkit-scrollbar-track)
+    {
+      -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+      border-radius: 8px;
+      background-color: transparent;
+      transform: translateX(10px);
+    }
+
+    :global(::-webkit-scrollbar)
+    {
+      width: 10px;
+      background-color: transparent;
+    }
+
+    :global(::-webkit-scrollbar-thumb)
+    {
+      border-radius: 8px;
+      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+      background-color: color(gray l(+20%));
+    }
+
+  }
+}
+
+.content {
+  /* width: 100%; */
+  width: $appWidth;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: calc(100% - $footer-height);
+  /* min-height: calc(100% - $footer-height); */
+  /* padding-bottom: 20px; */
+  padding-bottom: 1rem;
+  @mixin flex-box column, flex-start, center;
+}
+
+.main {
+  min-height: calc(100% - $footer-height);
+  @mixin flex-box row, stretch, c
+}
+
+.footer {
+  width: $appWidth;
+  margin-left: auto;
+  margin-right: auto;
+}
